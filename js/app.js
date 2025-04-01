@@ -1,8 +1,20 @@
-const moreNavButton = document.querySelector('.nav-item-more-button');
+const moreNavButton = document.querySelector('.nav-item-more');
 const moreNavList = document.querySelector('.more-nav');
 const searchButtonOpen = document.querySelector('.search-button-open');
 const overlay = document.querySelector('.title-search-overlay');
 const searchWrap = document.querySelector('.title-search-wrap');
+const hamburger = document.querySelector('.hamburger');
+const drawer = document.querySelector('.drawer');
+const drawerButtonClose = document.querySelectorAll('.drawer__close');
+const navList = document.querySelectorAll('.nav-item');
+const drawerSubMenu = document.querySelector('.drawer_submenu');
+
+navList.forEach((navItem) => {
+  navItem.addEventListener('click', (e) => {
+    drawerSubMenu.classList.add('is-visible');
+    console.log("lol");
+  })
+})
 
 searchButtonOpen.addEventListener('click', (e) => {
   overlay.classList.add('open');
@@ -18,14 +30,23 @@ overlay.addEventListener('click', (e) => {
   }
 })
 
-moreNavButton.addEventListener('click', (e) => {
-  moreNavList.classList.toggle('active');
+moreNavButton.addEventListener('mouseover', (e) => {
+  moreNavList.classList.add('active');
 })
 
-document.addEventListener( 'click', (e) => {
-  const withinBoundaries = e.composedPath().includes(moreNavList) || e.composedPath().includes(moreNavButton);
-
-  if ( ! withinBoundaries ) {
-    moreNavList.classList.remove('active'); // скрываем элемент т к клик был за его пределами
-  }
+moreNavButton.addEventListener('mouseout', (e) => {
+  moreNavList.classList.remove('active');
 })
+
+hamburger.addEventListener('click', (e) => {
+  drawer.classList.add('is-visible');
+})
+
+drawerButtonClose.forEach((btnDrawClose) => {
+  btnDrawClose.addEventListener('click', (e) => {
+    e.target.closest('.drawer').classList.remove('is-visible');
+  })
+})
+
+
+
