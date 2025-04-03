@@ -245,6 +245,17 @@ textarea {
   }
 }
 
+ul, li {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 /* Базовые стили */
 * {
   margin: 0;
@@ -300,6 +311,17 @@ body {
   align-items: center;
   flex-wrap: nowrap;
   padding: 0 12px;
+}
+
+.container {
+  position: relative;
+  max-width: 1320px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding: 0 12px;
+  margin: 0 auto;
 }
 
 /* Логотип */
@@ -502,7 +524,7 @@ body {
   transition: all 0.3s ease-in-out;
 }
 
-.search-button-close:hover .search-button-close-icon {
+.search-button-close:hover .search-button-close-icon, .header_priemnaya_row:hover .ask_form_text_page, .header_submenu li:hover a {
   color: #FF6224;
   transition: all 0.3s ease-in-out;
 }
@@ -681,6 +703,20 @@ body {
   transition: opacity .15s ease-in-out;
   max-height: 40px;
   background-color: #161E70;
+  cursor: pointer;
+}
+
+.drawer_submenu .drawer__close {
+  position: absolute;
+  top: 0.5rem;
+  right: 1rem;
+  margin: 0;
+  border: 0;
+  border-radius: 5px;
+  padding: 0.3rem;
+  transition: opacity .15s ease-in-out;
+  max-height: 40px;
+  background-color: #161E70;
 }
 
 .drawer__content {
@@ -774,6 +810,61 @@ body {
   transition: transform 1s;
 }
 
+.drawer__header_title {
+  font-size: 24px;
+  font-weight: 700;
+  padding-top: 20px;
+  width: 100%;
+}
+
+.drawer__header_title span {
+  margin-left: 12px;
+}
+
+.drawer_submenu .drawer__content {
+  padding: 2rem 1rem;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-row-gap: 48px;
+  grid-auto-flow: row;
+}
+
+.header_submenu_wrap {
+  position: relative;
+  padding: 0 12px;
+}
+
+.header_submenu_title {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  font-size: 1.2rem !important;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.header_submenu_title svg {
+  display: none;
+}
+
+.header_priemnaya_row {
+  position: absolute;
+  top: 103%;
+  right: 20px;
+
+}
+
+.ask_form_text_page {
+  padding: 20px;
+  color: white;
+  background-color: #2B3888 !important;
+  transition: all 0.15s ease-in-out;
+}
+
 /* Медиа-запросы */
 @media (min-width: 1276px) {
   .nav-item-more {
@@ -788,6 +879,12 @@ body {
 
   .more-nav .nav-item:nth-child(3) {
     display: block;
+  }
+}
+
+@media (max-width: 1200px) {
+  .row {
+    grid-template-columns: repeat(3, 1fr);
   }
 }
 
@@ -831,11 +928,21 @@ body {
     display: block;
   }
 
+  .header_submenu_title svg {
+    display: block;
+  }
+
 }
 
 @media (min-width: 992px) {
   .header-item {
     margin-left: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .row {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 
