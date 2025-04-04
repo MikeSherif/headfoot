@@ -628,6 +628,10 @@ body {
   display: flex;
 }
 
+.active-block {
+  display: block !important;
+}
+
 .drawer__overlay {
   display: none;
   position: fixed;
@@ -1053,6 +1057,10 @@ body {
   }
   .drawer {
     display: block;
+  }
+
+  .header_submenu_title {
+    cursor: pointer;
   }
 
   .header_submenu_title svg {

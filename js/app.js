@@ -8,6 +8,7 @@ const drawer = document.querySelector('.drawer');
 const drawerButtonClose = document.querySelectorAll('.drawer__close');
 const navList = document.querySelectorAll('.nav-item');
 const drawerSubMenu = document.querySelector('.drawer_submenu');
+const headerSubmenuControl = document.querySelectorAll('.submenu_control');
 
 navList.forEach((navItem) => {
   navItem.addEventListener('click', (e) => {
@@ -45,6 +46,12 @@ hamburger.addEventListener('click', (e) => {
 drawerButtonClose.forEach((btnDrawClose) => {
   btnDrawClose.addEventListener('click', (e) => {
     e.target.closest('.drawer').classList.remove('is-visible');
+  })
+})
+
+headerSubmenuControl.forEach((headerSubmenuControlEl) => {
+  headerSubmenuControlEl.addEventListener('click', (e) => {
+    e.target.closest('.is_parent').querySelector('.header_submenu_list').classList.toggle('active-block');
   })
 })
 
