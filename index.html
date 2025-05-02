@@ -388,23 +388,36 @@
   <br><br><br>
   <div class="container">
     <div class="filter level-filter level-req">
-      <div id="rangeSlider" class="range-slider">
-        <div class="number-group">
-          <div class="number-group-container">
-            <p class="number-group-container-text">от</p>
-            <input class="number-input" type="number" value="0" min="0" max="50" />
-          </div>
-          <div class="number-group-container">
-            <p class="number-group-container-text">до</p>
-            <input class="number-input" type="number" value="50" min="0" max="50" />
-            <p class="number-group-container-text">м²</p>
-          </div>
-        </div>
 
-        <div class="range-group">
-          <input class="range-input" value="0" min="0" max="50" step="1" type="range" />
-          <input class="range-input" value="50" min="0" max="50" step="1" type="range" />
+      <div class="filter-ui-group">
+        <div class="filter-button-group">
+          <button class="filter-button">Квартира</button>
+          <button class="filter-button">Коммерческое помещение</button>
+          <button class="filter-button">Паркинг</button>
+          <button class="filter-button">Кладовая</button>
         </div>
+        <div id="rangeSlider" class="range-slider">
+          <div class="number-group">
+            <div class="number-group-container">
+              <p class="number-group-container-text">от</p>
+              <input class="number-input" type="number" value="0" min="0" max="50"/>
+            </div>
+            <div class="number-group-container">
+              <p class="number-group-container-text">до</p>
+              <input class="number-input" type="number" value="50" min="0" max="50"/>
+              <p class="number-group-container-text">м²</p>
+            </div>
+          </div>
+          <div class="range-group">
+            <input class="range-input" value="0" min="0" max="50" step="1" type="range"/>
+            <input class="range-input" value="50" min="0" max="50" step="1" type="range"/>
+          </div>
+        </div>
+      </div>
+
+      <div class="filter-button-group">
+        <button class="filter-button">Все фильтры</button>
+        <button class="filter-button"><span class="filter-button-offer-count">100</span> предложений</button>
       </div>
     </div>
   </div>

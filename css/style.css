@@ -1105,10 +1105,65 @@ body {
   }
 }
 
-/*Range slider*/
+/*Filter--------------------------------------*/
 .filter {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   width: 100%;
 }
+
+.filter .filter-ui-group {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.filter .filter-button-group {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  height: 48px;
+}
+
+.filter-button {
+  font-family: 'Montserrat', sans-serif;
+  background-color: transparent;
+  border: 1px solid rgb(221, 220, 219);
+  display: flex;
+  flex-flow: row;
+  gap: 0.2rem;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+  width: fit-content;
+  max-width: 180px;
+  user-select: none;
+  border-radius: 28px;
+  padding: 0px 24px;
+  height: 100%;
+  color: rgb(20, 20, 20);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 16px;
+  letter-spacing: -0.02em;
+  transition: 0.5s ease-in-out all;
+}
+
+.filter .filter-button-group:last-of-type .filter-button:last-of-type {
+  max-width: 200px;
+}
+
+.filter-button:hover {
+  border: 1px solid rgb(131, 131, 131);
+  transition: 0.5s ease-in-out all;
+}
+
+/*Range slider*/
 
 .range-slider {
   font-family: 'Montserrat', sans-serif;
@@ -1132,7 +1187,7 @@ body {
   font-weight: 300;
   font-size: 13px;
   color: #fff;
-  border: 2px solid rgb(221, 220, 219);
+  border: 1px solid rgb(221, 220, 219);
   border-radius: 32px;
 }
 
