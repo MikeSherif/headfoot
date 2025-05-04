@@ -290,6 +290,13 @@
   background: transparent;
 }
 
+.filter-block-applied {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 32px;
+  border-bottom: 1px solid rgb(215, 215, 215);
+}
+
 .filter-block-applied-title {
   margin-bottom: 24px;
   font-size: 24px;
@@ -330,5 +337,20 @@
   height: 12px;
   appearance: none;
   background: transparent;
+}
+
+.filter-block-common {
+  width: 100%;
+}
+
+.filter-block-common .filter-button-group {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 15px;
+  height: 48px;
+}
+
+.filter-block-common .filter-button-group .filter-button {
+  min-width: 100%;
 }
 
