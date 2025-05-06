@@ -1,9 +1,11 @@
 const filterPopup = document.querySelector('.filter-details-popup');
-const filterButtonOpen = document.querySelector('.filter-button-details-open');
+const filterButtonOpen = document.querySelectorAll('.filter-button-details-open');
 const filterButtonClose = document.querySelector('.filter-button-close');
 
-filterButtonOpen.addEventListener('click', (e) => {
-  filterPopup.style.display = 'block';
+filterButtonOpen.forEach(el => {
+  el.addEventListener('click', (e) => {
+    filterPopup.style.display = 'block';
+  })
 })
 
 filterButtonClose.addEventListener('click', (e) => {

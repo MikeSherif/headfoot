@@ -2,7 +2,6 @@
 .filter {
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
   width: 100%;
 }
 
@@ -11,6 +10,11 @@
   flex-direction: row;
   flex-wrap: wrap;
   gap: 10px;
+  width: 100%;
+}
+
+.filter .filter-ui-group .filter-button-group:last-of-type {
+  margin-left: auto;
 }
 
 .filter .filter-button-group {
@@ -18,7 +22,6 @@
   flex-direction: row;
   flex-wrap: wrap;
   gap: 10px;
-  height: 48px;
 }
 
 .filter-button {
@@ -47,6 +50,10 @@
   line-height: 16px;
   letter-spacing: -0.02em;
   transition: 0.5s ease-in-out all;
+}
+
+.filter .filter-button-group:first-of-type .filter-button-details-open {
+  display: none;
 }
 
 .filter .filter-button-group:last-of-type .filter-button:last-of-type {
@@ -348,7 +355,6 @@
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   gap: 15px;
-  height: 48px;
 }
 
 .filter-block-common .filter-button-group .filter-button {
@@ -638,4 +644,120 @@
 
 .filter-block-controls-button-clear:hover {
   background-color: rgb(216, 216, 216);
+}
+
+@media (max-width: 1248px) {
+  .filter .filter-ui-group {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .filter .filter-ui-group .filter-button-group:first-of-type {
+    grid-column: 1/8;
+    grid-row: 1/2;
+  }
+
+  .filter .filter-ui-group .filter-button-group:last-of-type {
+    grid-column: 8/13;
+    grid-row: 1/2;
+  }
+
+  .filter .filter-ui-group .filter-button-group {
+    flex-wrap: nowrap;
+  }
+
+  .filter .filter-ui-group .range-slider {
+    grid-column: 1/13;
+    grid-row: 2/3;
+    width: 100%;
+  }
+}
+
+@media (max-width: 992px) {
+  .filter .filter-ui-group {
+    grid-template-rows: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .filter .filter-ui-group .filter-button-group:first-of-type {
+    grid-column: 1/13;
+    grid-row: 1/2;
+    justify-content: space-between;
+  }
+
+  .filter .filter-button-group:first-of-type .filter-button-details-open {
+    display: flex;
+  }
+
+  .filter .filter-button-group:last-of-type .filter-button-details-open {
+    display: none;
+  }
+
+  .filter .filter-ui-group .filter-button-group:last-of-type {
+    grid-column: 1/13;
+    grid-row: 3/4;
+    width: 100%;
+  }
+
+  .filter .filter-ui-group .filter-button-group:last-of-type .filter-button {
+    max-width: 100%;
+    min-width: 100%;
+  }
+
+  .filter-block-common .filter-button-group {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .filter-block-common .filter-button-group .select {
+    grid-column: 2/4;
+  }
+}
+
+@media (max-width: 768px) {
+  .filter .filter-ui-group {
+    grid-template-rows: repeat(4, 1fr);
+    gap: 20px;
+  }
+
+  .filter .filter-ui-group .filter-button-group:last-of-type {
+    grid-row: 3/5;
+  }
+
+  .filter .filter-button-group:first-of-type .filter-button-details-open {
+    display: none;
+  }
+
+  .filter .filter-button-group:last-of-type {
+    flex-direction: column;
+  }
+
+  .filter .filter-button-group:last-of-type .filter-button-details-open {
+    display: flex;
+  }
+}
+
+@media (max-width: 576px) {
+  .filter .filter-ui-group {
+    gap: 10px;
+  }
+
+  .filter .filter-button-group:first-of-type {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+
+  .filter .filter-button-group:first-of-type .filter-button {
+    max-width: 100%;
+    min-width: 100%;
+  }
+
+  .filter .filter-ui-group .range-slider {
+    max-height: 48px;
+  }
+
+  .filter .filter-button-group:last-of-type {
+    margin-top: -30px;
+  }
 }
