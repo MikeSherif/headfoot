@@ -1,15 +1,18 @@
 const filterPopup = document.querySelector('.filter-details-popup');
 const filterButtonOpen = document.querySelectorAll('.filter-button-details-open');
 const filterButtonClose = document.querySelector('.filter-button-close');
+const footer = document.querySelector('.footer');
 
 filterButtonOpen.forEach(el => {
   el.addEventListener('click', (e) => {
     filterPopup.style.display = 'block';
+    footer.style.display = 'none';
   })
 })
 
 filterButtonClose.addEventListener('click', (e) => {
   filterPopup.style.display = 'none';
+  footer.style.display = 'block';
 })
 
 function RangeSlider() {
