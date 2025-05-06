@@ -355,6 +355,10 @@
   min-width: 100%;
 }
 
+.filter-block-common .filter-button-group .filter-button:visited {
+  border: 1px solid rgb(131, 131, 131);
+}
+
 .select {
   font-family: "Montserrat", Montserrat, sans-serif;
   position: relative;
@@ -494,12 +498,13 @@
   font-size: 16px;
   line-height: 16px;
   letter-spacing: -0.02em;
-  transition: 0.5s ease-in-out all;
-  border-bottom: 1px solid rgb(173, 173, 173);
+  transition: 0.3s ease-in-out all;
+  border-bottom: 1px solid rgba(173, 173, 173, 0.5);
+  outline: 0;
 }
 
 .select__item:hover {
-  background-color: #f2f2f2;
+  border-bottom: 1.5px solid rgb(173, 173, 173);
 }
 
 .filter-block-details {
@@ -524,13 +529,38 @@
   background: #000000;
 }
 
+.filter-block-details .filter-block-details-wrapper:first-of-type .filter-button-group {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.filter-block-details-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
 .filter-block-details-wrapper-title {
-  margin-bottom: 40px;
   font-size: 24px;
   line-height: 24px;
   letter-spacing: -0.02em;
   font-weight: 500;
   color: rgb(58, 58, 58);
+}
+
+.filter-block-details-wrapper-range {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.filter-block-details-wrapper-range-title {
+  color: rgb(58, 58, 58);
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 16px;
+  letter-spacing: -0.02em;
 }
 
 
