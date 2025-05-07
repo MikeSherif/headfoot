@@ -22,19 +22,21 @@ class ButtonsInput extends BaseInput {
     constructor(fclass, fname, default_value=null){
         super(default_value, fclass, fname,);
         this.fobjects = null;
-        if (this.init()){
-          for (let i = 0; i < this.fobjects.length; i++) {
-            this.fobjects[i].addEventListener("click", (e) => {
-              e.target.classList.toggle("filter-button-active");
-              for (let j = 0; j < this.fobjects.length; j++) {
-                if (i !== j && this.fobjects[j].classList.contains('filter-button-active')){
-                  this.fobjects[j].classList.toggle('filter-button-active');
+        try {
+          if (this.init()){
+            for (let i = 0; i < this.fobjects.length; i++) {
+              this.fobjects[i].addEventListener("click", (e) => {
+                e.target.classList.toggle("filter-button-active");
+                for (let j = 0; j < this.fobjects.length; j++) {
+                  if (i !== j && this.fobjects[j].classList.contains('filter-button-active')){
+                    this.fobjects[j].classList.remove('filter-button-active');
+                  }
                 }
-              }
-            })
+              })
+            }
           }
-        } else {
-            //raise error
+        } catch (err) {
+          console.log(err);
         }
     }
     init(){
