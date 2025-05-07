@@ -439,6 +439,12 @@
   ;*/
 }
 
+.select__multiply .select__current {
+  justify-content: flex-start;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
 .select__icon {
   box-sizing: border-box;
   display: flex;
@@ -496,7 +502,13 @@
 }
 
 .select__item {
-  min-height: 25px !important;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  min-height: 40px;
+  height: fit-content;
   padding-left: 5px;
   cursor: pointer;
   color: rgb(20, 20, 20);
@@ -505,8 +517,29 @@
   line-height: 16px;
   letter-spacing: -0.02em;
   transition: 0.3s ease-in-out all;
+  padding-bottom: 10px;
   border-bottom: 1px solid rgba(173, 173, 173, 0.5);
   outline: 0;
+}
+
+.checkRounded {
+  display: flex;
+  flex-flow: row;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  flex: 0 0 24px;
+  width: 24px;
+  position: relative;
+  height: 24px;
+  box-sizing: border-box;
+  border-radius: 50%;
+  visibility: visible;
+  opacity: 1;
+  background-color: rgb(255, 65, 20);
+  border: none;
+  margin-right: 5px;
 }
 
 .select__item:hover {
