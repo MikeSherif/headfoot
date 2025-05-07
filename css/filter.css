@@ -65,6 +65,11 @@
   transition: 0.5s ease-in-out all;
 }
 
+.filter-button-active {
+  border: 1px solid rgb(131, 131, 131);
+  transition: 0.5s ease-in-out all;
+}
+
 /*Range slider*/
 
 .range-slider {
