@@ -56,12 +56,75 @@ class ButtonsInput extends BaseInput {
       this.fobjects[i].addEventListener("click", this.buttonClick);
     }
   }
+
+  createDictionary() {
+    return {[this.fname]: this.value}
+  }
+}
+
+class RangeFilter extends BaseInput {
+  constructor(fclass, fname, default_value = []) {
+    super(default_value, fclass, fname,);
+    this.fobjects = null;
+    if (this.init()){
+
+    } else {
+      // raise error
+    }
+  }
+
+  init() {
+    this.fobjects =
+      {
+        min_number : document.querySelector(`.${this.fclass}[name="${this.fname}_min_number"]`),
+        max_number : document.querySelector(`.${this.fclass}[name="${this.fname}_max_number"]`),
+
+        min_range : document.querySelector(`.${this.fclass}[name="${this.fname}_min_range"]`),
+        max_range : document.querySelector(`.${this.fclass}[name="${this.fname}_max_range"]`),
+      };
+    console.log(this.fobjects)
+    console.log(`.${this.fclass}[name="${this.fname}_min_number"]`);
+    for (const [key, value] of Object.entries(this.fobjects)) {
+      console.log(value);
+      if (!value) {
+        return false;
+      }
+    }
+    return true;
+  }
+
+  initVisual() {
+    const numbers = [this.fobjects.min_number, this.fobjects.max_number];
+    const ranges = [this.fobjects.min_range, this.fobjects.max_range];
+    ranges.forEach(function(el) {
+      el.oninput = function() {
+        //!-------Остановочная
+        var slide1 = parseFloat(this.fobjects.min_range.value),
+          slide2 = parseFloat(this.fobjects.min_range.value);
+
+
+        if (slide1 > slide2) {
+          [slide1, slide2] = [slide2, slide1];
+          // var tmp = slide2;
+          // slide2 = slide1;
+          // slide1 = tmp;
+        }
+
+        numberS[0].value = slide1;
+        numberS[1].value = slide2;
+        console.log(slide1, slide2);
+      }
+    });
+  }
+
 }
 
 class SmallFilter extends BaseFilter {
   constructor(){
     super();
     this.type_buttons = new ButtonsInput("filter-button-small-filter", "type");
+    this.type_ranges = new RangeFilter("small-filter-price-range", "small_filter_price_range");
+
   }
 }
 class BigFilter extends BaseFilter {
