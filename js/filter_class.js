@@ -180,6 +180,8 @@ class SmallFilter extends BaseFilter {
 class BigFilter extends BaseFilter {
   constructor() {
     super()
+    this.type_ranges_price = new RangeFilter("big-filter-price-range", "big_filter_price_range");
+    this.type_ranges_square = new RangeFilter("big-filter-square-range", "big_filter_square_range")
   }
 }
 
@@ -201,6 +203,7 @@ class HtmlClassesDependancies {
 class Filter {
   constructor() {
     const small_filter = new SmallFilter();
+    const big_filter = new BigFilter();
     // Инициализация маленького фильтра
     // Инициализация большого фильтра
   }
