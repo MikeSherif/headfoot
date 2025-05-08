@@ -4,12 +4,14 @@ class BaseFilter {
     // return html
   }
 }
+
 class BaseInput {
-  constructor(default_value, fclass, fname){
+  constructor(default_value, fclass, fname) {
     this.value = default_value
     this.fclass = fclass;
     this.fname = fname;
   }
+
   // get value() {
   //     return this.value();
   // }
@@ -19,32 +21,33 @@ class BaseInput {
 }
 
 class ButtonsInput extends BaseInput {
-  constructor(fclass, fname, default_value=null){
+  constructor(fclass, fname, default_value = null) {
     super(default_value, fclass, fname,);
     this.fobjects = null;
-    if (this.init()){
+    if (this.init()) {
       this.initListener();
     } else {
       // raise error
     }
 
   }
-  init(){
+
+  init() {
     this.fobjects = document.querySelectorAll(`.${this.fclass}[name="${this.fname}"]`)
     // console.log(this.fobjects)
-    if (this.fobjects.length === 0){
+    if (this.fobjects.length === 0) {
       return false;
     }
     return true;
   }
 
-  set_value(value){
+  set_value(value) {
     this.value = value;
   }
 
   buttonClick = (e) => {
     for (let j = 0; j < this.fobjects.length; j++) {
-        this.fobjects[j].classList.remove('filter-button-active');
+      this.fobjects[j].classList.remove('filter-button-active');
     }
     e.target.classList.add("filter-button-active");
     this.set_value(e.target.dataset.value);
@@ -63,20 +66,21 @@ class ButtonsInput extends BaseInput {
 }
 
 class ButtonsOpen extends BaseInput {
-  constructor(fclass, fname, default_value=null){
+  constructor(fclass, fname, default_value = null) {
     super(default_value, fclass, fname,);
     this.fobjects = null;
-    if (this.init()){
+    if (this.init()) {
       this.initListener();
     } else {
       // raise error
     }
 
   }
-  init(){
+
+  init() {
     this.fobjects = document.querySelectorAll(`.${this.fclass}[name="${this.fname}"]`)
     // console.log(this.fobjects)
-    if (this.fobjects.length === 0){
+    if (this.fobjects.length === 0) {
       return false;
     }
     return true;
@@ -100,7 +104,7 @@ class RangeFilter extends BaseInput {
   constructor(fclass, fname, default_value = []) {
     super(default_value, fclass, fname,);
     this.fobjects = null;
-    if (this.init()){
+    if (this.init()) {
       this.initVisual();
     } else {
       // raise error
@@ -110,11 +114,11 @@ class RangeFilter extends BaseInput {
   init() {
     this.fobjects =
       {
-        min_number : document.querySelector(`.${this.fclass}[name="${this.fname}_min_number"]`),
-        max_number : document.querySelector(`.${this.fclass}[name="${this.fname}_max_number"]`),
+        min_number: document.querySelector(`.${this.fclass}[name="${this.fname}_min_number"]`),
+        max_number: document.querySelector(`.${this.fclass}[name="${this.fname}_max_number"]`),
 
-        min_range : document.querySelector(`.${this.fclass}[name="${this.fname}_min_range"]`),
-        max_range : document.querySelector(`.${this.fclass}[name="${this.fname}_max_range"]`),
+        min_range: document.querySelector(`.${this.fclass}[name="${this.fname}_min_range"]`),
+        max_range: document.querySelector(`.${this.fclass}[name="${this.fname}_max_range"]`),
       };
     // console.log(this.fobjects)
     // console.log(`.${this.fclass}[name="${this.fname}_min_number"]`);
@@ -130,18 +134,14 @@ class RangeFilter extends BaseInput {
   initVisual() {
     const numbers = [this.fobjects.min_number, this.fobjects.max_number];
     const ranges = [this.fobjects.min_range, this.fobjects.max_range];
-    ranges.forEach(function(el) {
-      el.oninput = function() {
+    ranges.forEach(function (el) {
+      el.oninput = function () {
         //!-------Остановочная
         var slide1 = parseFloat(ranges[0].value),
           slide2 = parseFloat(ranges[1].value);
 
-
         if (slide1 > slide2) {
           [slide1, slide2] = [slide2, slide1];
-          // var tmp = slide2;
-          // slide2 = slide1;
-          // slide1 = tmp;
         }
 
         numbers[0].value = slide1;
@@ -150,8 +150,8 @@ class RangeFilter extends BaseInput {
       }
     });
 
-    numbers.forEach(function(el) {
-      el.oninput = function() {
+    numbers.forEach(function (el) {
+      el.oninput = function () {
         var number1 = parseFloat(numbers[0].value),
           number2 = parseFloat(numbers[1].value);
 
@@ -163,42 +163,43 @@ class RangeFilter extends BaseInput {
 
         ranges[0].value = number1;
         ranges[1].value = number2;
-
       }
     });
   }
-
 }
 
 class SmallFilter extends BaseFilter {
-  constructor(){
+  constructor() {
     super();
     this.type_buttons = new ButtonsInput("filter-button-small-filter", "type");
     this.type_ranges = new RangeFilter("small-filter-price-range", "small_filter_price_range");
     this.type_buttons_open = new ButtonsOpen("filter-button-details-open", "open");
   }
 }
+
 class BigFilter extends BaseFilter {
-  constructor(){
+  constructor() {
     super()
   }
 }
+
 // DI данные для запросов
 class ServerDependancies {
-  constructor(){
+  constructor() {
 
   }
 }
+
 // DI данные для запросов
 class HtmlClassesDependancies {
-  constructor(){
+  constructor() {
 
   }
 }
 
 // Класс для общей инициализаии при рендере
 class Filter {
-  constructor(){
+  constructor() {
     const small_filter = new SmallFilter();
     // Инициализация маленького фильтра
     // Инициализация большого фильтра
