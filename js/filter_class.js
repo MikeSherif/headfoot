@@ -31,7 +31,7 @@ class ButtonsInput extends BaseInput {
   }
   init(){
     this.fobjects = document.querySelectorAll(`.${this.fclass}[name="${this.fname}"]`)
-    console.log(this.fobjects)
+    // console.log(this.fobjects)
     if (this.fobjects.length === 0){
       return false;
     }
@@ -62,6 +62,40 @@ class ButtonsInput extends BaseInput {
   }
 }
 
+class ButtonsOpen extends BaseInput {
+  constructor(fclass, fname, default_value=null){
+    super(default_value, fclass, fname,);
+    this.fobjects = null;
+    if (this.init()){
+      this.initListener();
+    } else {
+      // raise error
+    }
+
+  }
+  init(){
+    this.fobjects = document.querySelectorAll(`.${this.fclass}[name="${this.fname}"]`)
+    // console.log(this.fobjects)
+    if (this.fobjects.length === 0){
+      return false;
+    }
+    return true;
+  }
+
+
+  buttonClick = () => {
+    document.querySelector('.filter-details-popup').style.display = 'block';
+    document.querySelector('.footer').style.display = 'none';
+  }
+
+  initListener() {
+    this.fobjects.forEach((el) => {
+      el.addEventListener('click', this.buttonClick);
+    })
+  }
+
+}
+
 class RangeFilter extends BaseInput {
   constructor(fclass, fname, default_value = []) {
     super(default_value, fclass, fname,);
@@ -82,10 +116,10 @@ class RangeFilter extends BaseInput {
         min_range : document.querySelector(`.${this.fclass}[name="${this.fname}_min_range"]`),
         max_range : document.querySelector(`.${this.fclass}[name="${this.fname}_max_range"]`),
       };
-    console.log(this.fobjects)
-    console.log(`.${this.fclass}[name="${this.fname}_min_number"]`);
+    // console.log(this.fobjects)
+    // console.log(`.${this.fclass}[name="${this.fname}_min_number"]`);
     for (const [key, value] of Object.entries(this.fobjects)) {
-      console.log(value);
+      // console.log(value);
       if (!value) {
         return false;
       }
@@ -141,7 +175,7 @@ class SmallFilter extends BaseFilter {
     super();
     this.type_buttons = new ButtonsInput("filter-button-small-filter", "type");
     this.type_ranges = new RangeFilter("small-filter-price-range", "small_filter_price_range");
-
+    this.type_buttons_open = new ButtonsOpen("filter-button-details-open", "open");
   }
 }
 class BigFilter extends BaseFilter {
@@ -151,11 +185,15 @@ class BigFilter extends BaseFilter {
 }
 // DI данные для запросов
 class ServerDependancies {
-  constructor(){}
+  constructor(){
+
+  }
 }
 // DI данные для запросов
 class HtmlClassesDependancies {
-  constructor(){}
+  constructor(){
+
+  }
 }
 
 // Класс для общей инициализаии при рендере
