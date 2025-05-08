@@ -67,7 +67,7 @@ class RangeFilter extends BaseInput {
     super(default_value, fclass, fname,);
     this.fobjects = null;
     if (this.init()){
-
+      this.initVisual();
     } else {
       // raise error
     }
@@ -99,8 +99,8 @@ class RangeFilter extends BaseInput {
     ranges.forEach(function(el) {
       el.oninput = function() {
         //!-------Остановочная
-        var slide1 = parseFloat(this.fobjects.min_range.value),
-          slide2 = parseFloat(this.fobjects.min_range.value);
+        var slide1 = parseFloat(ranges[0].value),
+          slide2 = parseFloat(ranges[1].value);
 
 
         if (slide1 > slide2) {
@@ -110,9 +110,26 @@ class RangeFilter extends BaseInput {
           // slide1 = tmp;
         }
 
-        numberS[0].value = slide1;
-        numberS[1].value = slide2;
+        numbers[0].value = slide1;
+        numbers[1].value = slide2;
         console.log(slide1, slide2);
+      }
+    });
+
+    numbers.forEach(function(el) {
+      el.oninput = function() {
+        var number1 = parseFloat(numbers[0].value),
+          number2 = parseFloat(numbers[1].value);
+
+        if (number1 > number2) {
+          var tmp = number1;
+          numbers[0].value = number2;
+          numbers[1].value = tmp;
+        }
+
+        ranges[0].value = number1;
+        ranges[1].value = number2;
+
       }
     });
   }
