@@ -210,24 +210,26 @@ class SelectDropdown extends BaseInput {
       const isMultiple = header.classList.contains('select__multiply');
       const selectId = select.dataset.id;
 
-      // Обработчик для открытия/закрытия селекта
-      header.addEventListener('click', () => {
-        select.classList.toggle('is-active');
-      });
+      this.selectToggle(header, select);
 
       // Обработчик для выбора элементов
-      items.forEach(item => {this.initItemListeners(item,selectId,isMultiple,currentText)});
+      items.forEach(item => {this.initItemListeners(select, item, selectId, isMultiple, currentText)});
 
-      // Закрытие при клике вне селекта
-      document.addEventListener('click', (event) => {
-        if (select.classList.contains('is-active') && !select.contains(event.target)) {
-          select.classList.remove('is-active');
-        }
-      });
     });
   }
 
-  initItemListeners(item,selectId,isMultiple,currentText) {
+  selectToggle(item, select) {
+    item.addEventListener('click', () => {
+      select.classList.toggle('is-active');
+    });
+    document.addEventListener('click', (event) => {
+      if (select.classList.contains('is-active') && !select.contains(event.target)) {
+        select.classList.remove('is-active');
+      }
+    });
+  }
+
+  initItemListeners(select, item, selectId, isMultiple, currentText) {
     item.addEventListener('click', () => {
       const text = item.innerText.trim();
       let selectedItems = this.selectedItemsMap.get(selectId);
@@ -293,6 +295,7 @@ class SelectDropdown extends BaseInput {
 
   // Сеттер для установки значения
   set value(newValue) {
+    console.log(newValue)
     this._value = newValue;
   }
 
