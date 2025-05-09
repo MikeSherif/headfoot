@@ -97,7 +97,40 @@ class ButtonsOpen extends BaseInput {
       el.addEventListener('click', this.buttonClick);
     })
   }
+}
 
+class ButtonsClose extends BaseInput {
+  constructor(fclass, fname, default_value = null) {
+    super(default_value, fclass, fname,);
+    this.fobjects = null;
+    if (this.init()) {
+      this.initListener();
+    } else {
+      // raise error
+    }
+
+  }
+
+  init() {
+    this.fobjects = document.querySelectorAll(`.${this.fclass}[name="${this.fname}"]`)
+    // console.log(this.fobjects)
+    if (this.fobjects.length === 0) {
+      return false;
+    }
+    return true;
+  }
+
+
+  buttonClick = () => {
+    document.querySelector('.filter-details-popup').style.display = 'none';
+    document.querySelector('.footer').style.display = 'block';
+  }
+
+  initListener() {
+    this.fobjects.forEach((el) => {
+      el.addEventListener('click', this.buttonClick);
+    })
+  }
 }
 
 class RangeFilter extends BaseInput {
@@ -187,19 +220,20 @@ class SelectDropdown extends BaseInput {
     if (this.fobjects.length === 0) {
       return false;
     }
-
     // Для каждого селекта сохраняем исходный текст и инициализируем выбранные элементы
-    this.fobjects.forEach(select => {
-      const currentText = select.querySelector('.select__current');
-      if (!currentText) return false; // Если нет select__current, возвращаем false
-
-      const selectId = select.dataset.id || Math.random().toString(36).substring(2);
-      select.dataset.id = selectId;
-      this.initialTexts[selectId] = currentText.innerText.trim();
-      this.selectedItemsMap.set(selectId, [...this.value]); // Инициализируем выбранные элементы из default_value
-    });
+    this.fobjects.forEach(select => {this.initSelectItems(select)});
 
     return true;
+  }
+
+  initSelectItems(select) {
+    const currentText = select.querySelector('.select__current');
+    if (!currentText) return false; // Если нет select__current, возвращаем false
+
+    const selectId = select.dataset.id || Math.random().toString(36).substring(2);
+    select.dataset.id = selectId;
+    this.initialTexts[selectId] = currentText.innerText.trim();
+    this.selectedItemsMap.set(selectId, [...this.value]); // Инициализируем выбранные элементы из default_value
   }
 
   initVisual() {
@@ -318,7 +352,9 @@ class SmallFilter extends BaseFilter {
 class BigFilter extends BaseFilter {
   constructor() {
     super()
+    this.type_button_close = new ButtonsClose("filter-button-close", "close");
     this.type_buttons = new ButtonsInput("filter-button-big-filter", "type");
+    this.type_buttons_rooms = new ButtonsInput("filter-button-big-filter", "type_room");
     this.type_ranges_price = new RangeFilter("big-filter-price-range", "big_filter_price_range");
     this.type_ranges_square = new RangeFilter("big-filter-square-range", "big_filter_square_range")
     this.type_select = new SelectDropdown("big-filter-select", "big_filter_select");
