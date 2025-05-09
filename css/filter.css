@@ -303,6 +303,7 @@
 }
 
 .filter-block-applied {
+  width: 100%;
   display: flex;
   flex-direction: column;
   margin-bottom: 32px;

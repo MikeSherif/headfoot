@@ -359,7 +359,9 @@ class ButtonAppliedClear extends BaseInput {
   }
 
   buttonClick = () => {
-    document.querySelector('.filter-block-applied').remove();
+    document.querySelectorAll('.filter-block-applied-wrapper').forEach(el => {
+      el.remove();
+    });
   }
 
   initListener() {
