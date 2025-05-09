@@ -112,7 +112,7 @@ class ButtonsClose extends BaseInput {
   }
 
   init() {
-    this.fobjects = document.querySelectorAll(`.${this.fclass}[name="${this.fname}"]`)
+    this.fobjects = document.querySelector(`.${this.fclass}[name="${this.fname}"]`)
     // console.log(this.fobjects)
     if (this.fobjects.length === 0) {
       return false;
@@ -127,9 +127,7 @@ class ButtonsClose extends BaseInput {
   }
 
   initListener() {
-    this.fobjects.forEach((el) => {
-      el.addEventListener('click', this.buttonClick);
-    })
+    this.fobjects.addEventListener('click', this.buttonClick);
   }
 }
 
@@ -340,6 +338,35 @@ class SelectDropdown extends BaseInput {
   }
 }
 
+class ButtonAppliedClear extends BaseInput {
+  constructor(fclass, fname, default_value = null) {
+    super(default_value, fclass, fname,);
+    this.fobjects = null;
+    if (this.init()) {
+      this.initListener();
+    } else {
+      // raise error
+    }
+  }
+
+  init() {
+    this.fobjects = document.querySelector(`.${this.fclass}[name="${this.fname}"]`)
+    // console.log(this.fobjects)
+    if (this.fobjects.length === 0) {
+      return false;
+    }
+    return true;
+  }
+
+  buttonClick = () => {
+    document.querySelector('.filter-block-applied-wrapper').remove();
+  }
+
+  initListener() {
+    this.fobjects.addEventListener('click', this.buttonClick);
+  }
+}
+
 class SmallFilter extends BaseFilter {
   constructor() {
     super();
@@ -358,6 +385,7 @@ class BigFilter extends BaseFilter {
     this.type_ranges_price = new RangeFilter("big-filter-price-range", "big_filter_price_range");
     this.type_ranges_square = new RangeFilter("big-filter-square-range", "big_filter_square_range")
     this.type_select = new SelectDropdown("big-filter-select", "big_filter_select");
+    this.type_button_clear = new ButtonAppliedClear("filter-block-controls-button-clear", "clear");
   }
 }
 
