@@ -168,6 +168,141 @@ class RangeFilter extends BaseInput {
   }
 }
 
+class SelectDropdown extends BaseInput {
+  constructor(fclass, fname, default_value = []) {
+    super(default_value, fclass, fname);
+    this.fobjects = null;
+    this.initialTexts = {}; // Для хранения исходного текста каждого селекта
+    this.selectedItemsMap = new Map(); // Для хранения выбранных элементов для каждого селекта
+    if (this.init()) {
+      this.initVisual();
+    } else {
+      throw new Error(`Не удалось инициализировать SelectDropdown для ${this.fclass} с именем ${this.fname}`);
+    }
+  }
+
+  init() {
+    // Ищем все селекты с заданным классом и именем
+    this.fobjects = document.querySelectorAll(`.${this.fclass}[name="${this.fname}"]`);
+    if (this.fobjects.length === 0) {
+      return false;
+    }
+
+    // Для каждого селекта сохраняем исходный текст и инициализируем выбранные элементы
+    this.fobjects.forEach(select => {
+      const currentText = select.querySelector('.select__current');
+      if (!currentText) return false; // Если нет select__current, возвращаем false
+
+      const selectId = select.dataset.id || Math.random().toString(36).substring(2);
+      select.dataset.id = selectId;
+      this.initialTexts[selectId] = currentText.innerText.trim();
+      this.selectedItemsMap.set(selectId, [...this.value]); // Инициализируем выбранные элементы из default_value
+    });
+
+    return true;
+  }
+
+  initVisual() {
+    this.fobjects.forEach(select => {
+      const header = select.querySelector('.select__header');
+      const items = select.querySelectorAll('.select__item');
+      const currentText = select.querySelector('.select__current');
+      const isMultiple = header.classList.contains('select__multiply');
+      const selectId = select.dataset.id;
+
+      // Обработчик для открытия/закрытия селекта
+      header.addEventListener('click', () => {
+        select.classList.toggle('is-active');
+      });
+
+      // Обработчик для выбора элементов
+      items.forEach(item => {this.initItemListeners(item,selectId,isMultiple,currentText)});
+
+      // Закрытие при клике вне селекта
+      document.addEventListener('click', (event) => {
+        if (select.classList.contains('is-active') && !select.contains(event.target)) {
+          select.classList.remove('is-active');
+        }
+      });
+    });
+  }
+
+  initItemListeners(item,selectId,isMultiple,currentText) {
+    item.addEventListener('click', () => {
+      const text = item.innerText.trim();
+      let selectedItems = this.selectedItemsMap.get(selectId);
+
+      if (isMultiple) {
+        // Логика для множественного селекта
+        let isSelected = item.querySelector('.checkRounded') !== null;
+
+        // Если это первый выбор, сбрасываем текст
+        if (selectedItems.length === 1 && selectedItems[0] === this.initialTexts[selectId]) {
+          selectedItems = [];
+        }
+
+        if (isSelected) {
+          // Удаляем элемент, если он уже выбран
+          selectedItems = selectedItems.filter(selected => selected !== text);
+          item.querySelector('.checkRounded').remove();
+        } else {
+          // Добавляем элемент, если он не выбран
+          selectedItems.push(text);
+          const checkDiv = document.createElement('div');
+          checkDiv.className = 'checkRounded';
+          const img = document.createElement('img');
+          img.src = 'img/checkRounded.svg';
+          img.alt = 'Картинка галочки';
+          checkDiv.appendChild(img);
+          item.appendChild(checkDiv);
+        }
+
+        // Обновляем текст в select__current через запятую
+        currentText.innerText = selectedItems.length > 0 ? selectedItems.join(', ') : this.initialTexts[selectId];
+        // Не закрываем селект при выборе
+      } else {
+        // Логика для обычного селекта
+        selectedItems = [text];
+        currentText.innerText = text;
+        select.classList.remove('is-active');
+        select.classList.add('is-chosen');
+      }
+
+      // Обновляем выбранные элементы для данного селекта
+      this.selectedItemsMap.set(selectId, selectedItems);
+      // Обновляем общее значение фильтра
+      this.updateValue();
+    });
+  }
+
+  // Метод для обновления значения фильтра
+  updateValue() {
+    // Если у нас только один селект, берём его значения
+    if (this.fobjects.length === 1) {
+      this.value = this.selectedItemsMap.get(this.fobjects[0].dataset.id) || [];
+    } else {
+      // Если селектов несколько, собираем все значения в массив
+      this.value = Array.from(this.selectedItemsMap.values());
+    }
+  }
+
+  // Геттер для получения значения
+  get value() {
+    return this._value;
+  }
+
+  // Сеттер для установки значения
+  set value(newValue) {
+    this._value = newValue;
+  }
+
+  // Метод для формирования части запроса
+  get request_part() {
+    if (!this.value || this.value.length === 0) return {};
+    return { [this.fname]: this.value };
+  }
+}
+
 class SmallFilter extends BaseFilter {
   constructor() {
     super();
@@ -182,6 +317,7 @@ class BigFilter extends BaseFilter {
     super()
     this.type_ranges_price = new RangeFilter("big-filter-price-range", "big_filter_price_range");
     this.type_ranges_square = new RangeFilter("big-filter-square-range", "big_filter_square_range")
+    this.type_select = new SelectDropdown("big-filter-select", "big_filter_select");
   }
 }
 
