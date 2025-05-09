@@ -318,6 +318,7 @@ class SmallFilter extends BaseFilter {
 class BigFilter extends BaseFilter {
   constructor() {
     super()
+    this.type_buttons = new ButtonsInput("filter-button-big-filter", "type");
     this.type_ranges_price = new RangeFilter("big-filter-price-range", "big_filter_price_range");
     this.type_ranges_square = new RangeFilter("big-filter-square-range", "big_filter_square_range")
     this.type_select = new SelectDropdown("big-filter-select", "big_filter_select");
