@@ -293,48 +293,48 @@
   /*  width: 100%;*/
   /*}*/
 
-  /*.mini__header {*/
-  /*  box-sizing: border-box;*/
-  /*  position: relative;*/
-  /*  width: 100%;*/
-  /*  z-index: 1;*/
-  /*  height: 142px;*/
-  /*  margin-bottom: 65px;*/
-  /*}*/
+  .mini__header {
+    box-sizing: border-box;
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    height: 142px;
+    margin-bottom: 65px;
+  }
 
-  /*.mini__header-content {*/
-  /*  display: flex;*/
-  /*  flex-direction: column;*/
-  /*  gap: 10px;*/
-  /*  align-items: flex-start;*/
-  /*  padding-top: 20px;*/
-  /*}*/
+  .mini__header-content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+    padding-top: 20px;
+  }
 
-  /*.mini__header-content-nav {*/
-  /*  display: flex;*/
-  /*  flex-direction: row;*/
-  /*  gap: 10px;*/
-  /*}*/
+  .mini__header-content-nav {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
 
-  /*.mini__header-content-nav-element {*/
-  /*  color: rgb(0, 0, 0, 0.5);*/
-  /*  font-family: "Montserrat", Montserrat, sans-serif;*/
-  /*  font-size: clamp(0.4375rem, 0.3239rem + 0.5682vw, 0.75rem);*/
-  /*  font-weight: 400;*/
-  /*  line-height: 16px;*/
-  /*  letter-spacing: 0;*/
-  /*  text-decoration: none;*/
-  /*}*/
+  .mini__header-content-nav-element {
+    color: rgb(0, 0, 0, 0.5);
+    font-family: "Montserrat", Montserrat, sans-serif;
+    font-size: clamp(0.4375rem, 0.3239rem + 0.5682vw, 0.75rem);
+    font-weight: 400;
+    line-height: 16px;
+    letter-spacing: 0;
+    text-decoration: none;
+  }
 
-  /*.mini__header-content-title {*/
-  /*  color: rgb(22, 30, 112);*/
-  /*  font-family: "Montserrat", Montserrat, sans-serif;*/
-  /*  font-size: clamp(2rem, 1.8909rem + 0.5455vw, 2.3rem);*/
-  /*  font-weight: 500;*/
-  /*  line-height: 44.16px;*/
-  /*  letter-spacing: 0;*/
-  /*  text-align: left;*/
-  /*}*/
+  .mini__header-content-title {
+    color: rgb(22, 30, 112);
+    font-family: "Montserrat", Montserrat, sans-serif;
+    font-size: clamp(2rem, 1.8909rem + 0.5455vw, 2.3rem);
+    font-weight: 500;
+    line-height: 44.16px;
+    letter-spacing: 0;
+    text-align: left;
+  }
   .main {
     display: flex;
     flex-direction: column;
