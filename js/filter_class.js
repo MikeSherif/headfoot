@@ -435,8 +435,8 @@ class SelectDropdown extends BaseInput {
           selectedItems.push(text);
           const checkDiv = document.createElement('div');
           checkDiv.className = 'checkRounded';
-          const img = document.createElement('img');
-          img.src = 'img/checkRounded.svg';
+          const img = document.createElement('images');
+          img.src = 'images/checkRounded.svg';
           img.alt = 'Картинка галочки';
           checkDiv.appendChild(img);
           item.appendChild(checkDiv);

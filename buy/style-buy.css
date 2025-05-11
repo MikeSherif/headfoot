@@ -1,0 +1,1117 @@
+/*! HTML5 Boilerplate v9.0.1 | MIT License | https://html5boilerplate.com/ */
+
+/* main.css 3.0.0 | MIT License | https://github.com/h5bp/main.css#readme */
+/*
+ * What follows is the result of much research on cross-browser styling.
+ * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
+ * Kroc Camen, and the H5BP dev community and team.
+ */
+
+/* ==========================================================================
+   Base styles: opinionated defaults
+   ========================================================================== */
+
+   html {
+    color: #222;
+
+  }
+
+  /*
+   * Remove text-shadow in selection highlight:
+   * https://twitter.com/miketaylr/status/12228805301
+   *
+   * Customize the background color to match your design.
+   */
+
+  ::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+  }
+
+  ::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+  }
+
+  /*
+   * A better looking default horizontal rule
+   */
+
+  hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+  }
+
+  /*
+   * Remove the gap between audio, canvas, iframes,
+   * images, videos and the bottom of their containers:
+   * https://github.com/h5bp/html5-boilerplate/issues/440
+   */
+
+  audio,
+  canvas,
+  iframe,
+  img,
+  svg,
+  video {
+    vertical-align: middle;
+  }
+
+  /*
+   * Remove default fieldset styles.
+   */
+
+  fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+  }
+
+  /*
+   * Allow only vertical resizing of textareas.
+   */
+
+  textarea {
+    resize: vertical;
+  }
+
+  /* ==========================================================================
+     Author's custom styles
+     ========================================================================== */
+
+  /* ==========================================================================
+     Helper classes
+     ========================================================================== */
+
+  /*
+   * Hide visually and from screen readers
+   */
+
+  .hidden,
+  [hidden] {
+    display: none !important;
+  }
+
+  /*
+   * Hide only visually, but have it available for screen readers:
+   * https://snook.ca/archives/html_and_css/hiding-content-for-accessibility
+   *
+   * 1. For long content, line feeds are not interpreted as spaces and small width
+   *    causes content to wrap 1 word per line:
+   *    https://medium.com/@jessebeach/beware-smushed-off-screen-accessible-text-5952a4c2cbfe
+   */
+
+  .visually-hidden {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+    /* 1 */
+  }
+
+  /*
+   * Extends the .visually-hidden class to allow the element
+   * to be focusable when navigated to via the keyboard:
+   * https://www.drupal.org/node/897638
+   */
+
+  .visually-hidden.focusable:active,
+  .visually-hidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    white-space: inherit;
+    width: auto;
+  }
+
+  /*
+   * Hide visually and from screen readers, but maintain layout
+   */
+
+  .invisible {
+    visibility: hidden;
+  }
+
+  /*
+   * Clearfix: contain floats
+   *
+   * The use of `table` rather than `block` is only necessary if using
+   * `::before` to contain the top-margins of child elements.
+   */
+
+  .clearfix::before,
+  .clearfix::after {
+    content: "";
+    display: table;
+  }
+
+  .clearfix::after {
+    clear: both;
+  }
+
+  /* ==========================================================================
+     EXAMPLE Media Queries for Responsive Design.
+     These examples override the primary ('mobile first') styles.
+     Modify as content requires.
+     ========================================================================== */
+
+  @media only screen and (min-width: 35em) {
+    /* Style adjustments for viewports that meet the condition */
+  }
+
+  @media print,
+  (-webkit-min-device-pixel-ratio: 1.25),
+  (min-resolution: 1.25dppx),
+  (min-resolution: 120dpi) {
+    /* Style adjustments for high resolution devices */
+  }
+
+  /* ==========================================================================
+     Print styles.
+     Inlined to avoid the additional HTTP request:
+     https://www.phpied.com/delay-loading-your-print-css/
+     ========================================================================== */
+
+  @media print {
+    *,
+    *::before,
+    *::after {
+      background: #fff !important;
+      color: #000 !important;
+      /* Black prints faster */
+      box-shadow: none !important;
+      text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+      text-decoration: underline;
+    }
+
+    a[href]::after {
+      content: " (" attr(href) ")";
+    }
+
+    abbr[title]::after {
+      content: " (" attr(title) ")";
+    }
+
+    /*
+     * Don't show links that are fragment identifiers,
+     * or use the `javascript:` pseudo protocol
+     */
+    a[href^="#"]::after,
+    a[href^="javascript:"]::after {
+      content: "";
+    }
+
+    pre {
+      white-space: pre-wrap !important;
+    }
+
+    pre,
+    blockquote {
+      border: 1px solid #999;
+      page-break-inside: avoid;
+    }
+
+    tr,
+    img {
+      page-break-inside: avoid;
+    }
+
+    p,
+    h2,
+    h3, span {
+      margin: 0;
+      padding: 0;
+    }
+
+    h2,
+    h3 {
+      page-break-after: avoid;
+    }
+  }
+
+  select, option {
+    margin: 0;
+    padding: 0;
+  }
+
+  ul, li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  .button {
+    padding: 0;
+    margin: 0;
+  }
+
+  /*body {*/
+  /*  box-sizing: border-box;*/
+  /*  margin: 0;*/
+  /*  padding: 0;*/
+  /*  !*display: flex;*/
+  /*  justify-content: center;*/
+  /*  align-items: center;*/
+  /*  flex-direction: column;*!*/
+  /*  position: relative;*/
+  /*}*/
+
+  /*body::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 142px;
+    width: 100%;
+    background-color: #F7F7F7;
+    z-index: 0;
+  }*/
+
+
+
+  h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    padding: 0;
+  }
+
+  /*.header {*/
+  /*  width: 100%;*/
+  /*}*/
+
+  /*.mini__header {*/
+  /*  box-sizing: border-box;*/
+  /*  position: relative;*/
+  /*  width: 100%;*/
+  /*  z-index: 1;*/
+  /*  height: 142px;*/
+  /*  margin-bottom: 65px;*/
+  /*}*/
+
+  /*.mini__header-content {*/
+  /*  display: flex;*/
+  /*  flex-direction: column;*/
+  /*  gap: 10px;*/
+  /*  align-items: flex-start;*/
+  /*  padding-top: 20px;*/
+  /*}*/
+
+  /*.mini__header-content-nav {*/
+  /*  display: flex;*/
+  /*  flex-direction: row;*/
+  /*  gap: 10px;*/
+  /*}*/
+
+  /*.mini__header-content-nav-element {*/
+  /*  color: rgb(0, 0, 0, 0.5);*/
+  /*  font-family: "Montserrat", Montserrat, sans-serif;*/
+  /*  font-size: clamp(0.4375rem, 0.3239rem + 0.5682vw, 0.75rem);*/
+  /*  font-weight: 400;*/
+  /*  line-height: 16px;*/
+  /*  letter-spacing: 0;*/
+  /*  text-decoration: none;*/
+  /*}*/
+
+  /*.mini__header-content-title {*/
+  /*  color: rgb(22, 30, 112);*/
+  /*  font-family: "Montserrat", Montserrat, sans-serif;*/
+  /*  font-size: clamp(2rem, 1.8909rem + 0.5455vw, 2.3rem);*/
+  /*  font-weight: 500;*/
+  /*  line-height: 44.16px;*/
+  /*  letter-spacing: 0;*/
+  /*  text-align: left;*/
+  /*}*/
+  .main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  #map-buy > svg > g > path:hover {
+    fill: #FF6224;
+  }
+
+  .active {
+    fill: #FF6224;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .page-description {
+    color: #2B3888;
+    font-size: clamp(0.875rem, 0.6477rem + 1.1364vw, 1.5rem);
+    font-family: "Montserrat", Montserrat, sans-serif;
+    font-weight: 400;
+    line-height: 150%;
+    padding-bottom: 15px;
+  }
+
+  .map-buy {
+    padding-left: 62px;
+    width: fit-content;
+  }
+
+  #map-buy {
+    position: relative;
+  }
+
+  .map-buy-legend {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .map-buy-legend-block {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .map-buy-legend-block-green-flag {
+    width: 30px;
+    height: 25px;
+    border-radius: 8px;
+    background-color: #576FA0;
+  }
+
+  .map-buy-legend-block-red-flag {
+    width: 30px;
+    height: 25px;
+    border-radius: 8px;
+    background-color: #bcc5d9;
+  }
+
+  .map-buy-legend-description {
+    color:#bcc5d9;
+  }
+
+  .popup {
+    font-family: "Montserrat", Montserrat, sans-serif;
+    position: absolute;
+    width: fit-content;
+    height: fit-content;
+    z-index: 999;
+    -webkit-box-shadow: 0 4px 12px rgba(51, 64, 89, .2);
+    box-shadow: 0 4px 12px rgba(51, 64, 89, .2);
+    background: #fff;
+    font-size: 14px;
+    color: #161E70;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    border: 1px solid #FF6224;
+    border-radius: 20px;
+  }
+
+  .popup-button-close {
+    position: absolute;
+    top: 1px;
+    right: 12px;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    border: none;
+    background-color: transparent;
+    color: #161E70;
+    font-weight: 500;
+  }
+
+  .popup-title {
+
+  }
+
+  .popup-title-text {
+    font-size: 20px;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+  }
+
+  .popup-content {
+  }
+
+  .popup-content-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 0;
+    margin: 0;
+    line-height: 150%;
+  }
+
+  .popup-content-list-element {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .popup-content-list-element-name {
+    width: 167px;
+  }
+
+  .popup-content-list-element-count {
+    align-self: center;
+    font-weight: bold;
+  }
+
+  .searching-advantages {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .searching-advantages-help {
+    font-size: 16px;
+    color: #2B3888;
+    background-color: transparent;
+    border: 1px solid rgb(173, 173, 173);
+    border-radius: 20px;
+    margin-right: 31px;
+    width: 257px;
+    height: 39px;
+    padding: 0;
+    cursor: pointer;
+  }
+
+  .real-estate-search-title {
+    font-size: 32px;
+    font-family: "Montserrat", Montserrat, sans-serif;
+    color: #2B3888;
+    font-weight: 500;
+  }
+
+  .real-estate-search-controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .region-select {
+    font-size: 28px;
+    text-align: center;
+    font-weight: 400;
+    color: #2B3888;
+    background-color: transparent;
+    border: 1px solid rgb(173, 173, 173);
+    padding: 13px 0;
+    border-radius: 20px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 340px;
+    cursor: pointer;
+  }
+
+  .select {
+    font-family: "Montserrat", Montserrat, sans-serif;
+    position: relative;
+    width: 390px;
+  }
+
+  .select.is-active .select__body {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-height: 189px;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    padding-bottom: 5px;
+    /*scrollbar-color: #2B3888 transparent;
+    scrollbar-shadow-color: #222222;*/
+  }
+
+
+  .select.is-chosen .select__header,  .select.is-chosen .select__current {
+    background: #FF6224;
+    color: #fff;
+  }
+
+  .select.is-chosen .select__icon {
+    fill: #fff;
+  }
+
+  .select.is-active .select__icon {
+    transform: rotate(180deg); /* ������� �� 180 �������� */
+    transform-origin: center center;
+  }
+
+  .select__header {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 15px 0;
+    width: 100%;
+    height: 100%;
+    border: 1px solid rgb(173, 173, 173);
+    border-radius: 20px;
+  }
+
+  .select__current {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding-left: 10px;
+    width: 340px;
+    height: 100%;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: -1px;
+    color: #2B3888;
+    border-radius: 20px;
+    /*border: 1px solid rgb(173, 173, 173);
+    border-radius: 20px;
+    ;*/
+  }
+
+  .select__icon {
+    box-sizing: border-box;
+    display: flex;
+    width: 33px;
+    height: 41px;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+    margin-right: 15px;
+  }
+
+  .select__body {
+    background: #ffffff;
+    border: 1px solid rgb(173, 173, 173);
+    border-radius: 20px;
+    display: none;
+    left: 0;
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    top: 78px;
+    flex-direction: column;
+  }
+
+  .select__body-search {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    border:none;
+    border-bottom: 1px solid rgb(173, 173, 173);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+
+  }
+
+  .select__body-search-input {
+    border: none;
+    margin-left: -30px;
+  }
+
+  .select__item-list {
+    display: flex;
+    gap: 12px;
+    flex-direction: column;
+    position: relative;
+    max-height: 171px;
+    height: fit-content;
+    width: 75%;
+    margin-left: 58px;
+    overflow: auto;
+  }
+
+  /* ������ ���������� */
+  .select__item-list::-webkit-scrollbar {
+    width: 7px;
+  }
+
+  /* ��� ���������� (����) */
+  .select__item-list::-webkit-scrollbar-track {
+    background: transparent;
+    border: 1px solid rgb(173, 173, 173);
+    border-radius: 10px;
+    background-clip: padding-box;
+    padding: 1px;
+  }
+
+  /* �������� */
+  .select__item-list::-webkit-scrollbar-thumb {
+    background: #2B3888;
+    padding: 1px
+  }
+
+  .select__item {
+    cursor: pointer;
+    font-size: 16px;
+    line-height: 24px;
+    color: #2B3888;
+  }
+
+  .select__item:hover {
+    background-color: #f2f2f2;
+  }
+
+  .real-estate-search {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .real-estate-search-controls-zhilcomplex-search {
+    position: relative;
+  }
+
+  .real-estate-search-controls-zhilcomplex-search-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 594px;
+    height: 60px;
+    box-sizing: border-box;
+    font-size: 28px;
+    color: #2B3888;
+    background-color: transparent;
+    border: 1px solid rgb(173, 173, 173);
+    border-radius: 20px;
+    padding: 0 16px 0 21px;
+  }
+
+  .real-estate-form-input {
+    font-family: "Montserrat", Montserrat, sans-serif;
+    width: 440px;
+    height: 42px;
+    font-size: 28px;
+    font-weight: 400;
+    color: #2B3888;
+    border: none;
+  }
+
+  .real-estate-form-input:focus-visible {
+    outline: none;
+  }
+
+  .real-estate-form-input::placeholder {
+    color: #2B3888;
+  }
+
+  .real-estate-button-submit {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+  }
+
+  .dropdown-search {
+    display: none;
+    padding-bottom: 10px;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    max-height: 165px;
+    height: fit-content;
+    background: #ffffff;
+    border: 1px solid rgb(173, 173, 173);
+    border-radius: 20px;
+  }
+
+  .dropdown-search.show {
+    display: block; /* Show when class 'show' is added */
+  }
+
+  .dropdown-search-list {
+    max-height: 129px;
+    height: fit-content;
+    width: 95%;
+    padding-left: 20px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    overflow-y: auto;
+  }
+
+  /*scrollbar*/
+
+  .dropdown-search-list::-webkit-scrollbar {
+    width: 7px;
+  }
+
+  /* ��� ���������� (����) */
+  .dropdown-search-list::-webkit-scrollbar-track {
+    background: transparent;
+    border: 1px solid rgb(173, 173, 173);
+    border-radius: 10px;
+    background-clip: padding-box;
+    padding: 1px;
+  }
+
+  /* �������� */
+  .dropdown-search-list::-webkit-scrollbar-thumb {
+    background: #2B3888;
+    padding: 1px
+  }
+
+  .dropdown-search-list-item {
+    color: rgb(43, 56, 136);
+    font-family: "Montserrat", Montserrat, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: -1px;
+    text-align: left;
+    cursor: pointer;
+  }
+
+  .dropdown-search-list-item:hover {
+    color: #FF6224;
+  }
+
+  .dropdown-no-results {
+    color: rgb(43, 56, 136);
+    font-family: "Montserrat", Montserrat, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: -1px;
+    text-align: left;
+    padding-left: 20px;
+  }
+
+  /*�����*/
+  .need-help-popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* �������������� ������ ���� */
+    z-index: 999; /* ������ ���� ����, ��� � ������ */
+  }
+
+  .need-help-popup {
+    display: none;
+    width: 1072px;
+    height: 704px;
+    background: #FFFFFF;
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000; /* ��������� ������� z-index ��� ����������� ������ ��������� ��������� */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* ��������� ���� ��� ������� */
+  }
+
+  .popup__content {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    padding: 60px 80px;
+    box-sizing: border-box;
+  }
+
+  .popup__title {
+    color: #2B3888;
+    font-family: "Montserrat", Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+  }
+
+  .popup__form {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+
+  .popup__input {
+    box-sizing: border-box;
+    font-family: "Montserrat", Montserrat, sans-serif;
+    font-size: 20px;
+    color: #2B3888;
+    font-weight: 400;
+    line-height: 24px;
+    width: 340.65px;
+    height: 70px;
+    border-radius: 20px;
+    background: rgb(255, 255, 255);
+    border: 1px solid #2B3888;
+    padding: 0 28px 0 28px;
+    margin: 0;
+  }
+
+  .popup__input::placeholder, .popup__textarea::placeholder {
+    color: #2B3888;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+
+  .popup__input:focus-visible, .popup__textarea:focus-visible {
+    outline: none;
+  }
+
+
+  .popup__textarea {
+    box-sizing: border-box;
+    font-family: "Montserrat", Montserrat, sans-serif;
+    color: #2B3888;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    width: 909.33px;
+    height: 180px;
+    border-radius: 20px;
+    border: 1px solid #2B3888;
+    background: rgb(255, 255, 255);
+    padding: 28px;
+    margin: 0;
+    resize: none;
+  }
+
+  .popup__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 24px;
+    width: 389px;
+    height: 70px;
+    border-radius: 20px;
+    background: #FF6224;
+    border-color: transparent;
+    padding: 0;
+    margin: auto;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  .popup__button:hover {
+    background: #af4319;
+  }
+
+  .popup__message {
+    display: block !important;
+    width: 920px;
+    margin-inline: auto;
+    margin-top: 130px;
+    text-align: center;
+  }
+
+  .real-estate-buy {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-top: 35px;
+  }
+
+  .real-estate-buy-list {
+    display: grid;
+    grid-template-columns: repeat(3, clamp(9.375rem, 2.6786rem + 28.5714vw, 25rem));
+    gap: 18px;
+    justify-content: space-between;
+  }
+
+  .real-estate-buy-item {
+    font-family: "Montserrat", Montserrat, sans-serif;
+    color: rgb(43, 56, 136);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 15px;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0px 5px 5px 0px rgba(51, 64, 89, .2);
+    cursor: pointer;
+  }
+
+  .real-estate-buy-item-image {
+    width: /*369px*/clamp(9.375rem, 3.5089rem + 25.0286vw, 23.0625rem);
+    height: 250px;
+    border-radius: 20px;
+  }
+
+  .real-estate-buy-item-description {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .real-estate-buy-item-description-address-text, .real-estate-buy-item-description-price-text {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0;
+  }
+
+  .real-estate-buy-item-title {
+    align-self: start;
+    font-size: 24px;
+    font-weight: 900;
+    line-height: 36px;
+  }
+
+  .real-estate-buy-show-all-button {
+    display: none;
+    font-family: "Montserrat", Montserrat, sans-serif;
+    color: rgb(255, 255, 255);
+    font-size: 19.2px;
+    font-weight: 400;
+    line-height: 24px;
+    width: 367px;
+    height: 39px;
+    background: #2B3888;
+    border: 0;
+    border-radius: 20px;
+    cursor: pointer;
+    align-self: flex-end;
+    margin-right: 10px;
+  }
+
+  @media (max-width: 992px) {
+    .map-buy {
+      display: none;
+    }
+    .real-estate-buy-list {
+      grid-template-columns: repeat(2, clamp(18.75rem, 16.4773rem + 11.3636vw, 25rem));
+      justify-content: center;
+    }
+
+    .real-estate-search-controls {
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+      align-items: center;
+      width: 100%;
+    }
+
+    .select, .real-estate-search-controls-region_choose, .real-estate-search-controls-zhilcomplex-search, .real-estate-search-controls-zhilcomplex-search-form {
+      width: 100%;
+    }
+
+    .real-estate-buy-item-image {
+      width: 100%;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .select__item-list {
+      margin: 0;
+    }
+    .real-estate-buy-list {
+      grid-template-columns: 100%;
+      justify-content: center;
+    }
+
+    .real-estate-search-controls-zhilcomplex-search {
+      display: none;
+    }
+
+    .searching-advantages-help {
+      display: none;
+    }
+
+    body::after {
+      display: none;
+    }
+
+  }
+
+  @media (max-width: 576px) {
+    .container {
+      width: clamp(16.875rem, -3.125rem + 100vw, 32.875rem);
+      padding: 0 30px;
+    }
+
+    .select__current {
+      font-size: 20px;
+    }
+
+    .real-estate-buy-show-all-button {
+      width: 100%;
+      height: 60px;
+      margin: 0;
+    }
+  }
+
+.real-estate-search-link {
+  cursor: pointer;
+}
+
+.send-application {
+
+  width: 48px;
+  height: 48px;
+  position: fixed;
+  right: 1.875rem;
+  bottom: 1.875rem;
+  z-index: 20;
+  border-radius: 50%;
+}
+
+.send-application-button {
+  width: 100%;
+  height: 100%;
+  background-color: #161E70;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.send-application-image {
+  width: 28px;
+  height: 28px;
+}
+
+.real-estate-buy-item-description-hidden {
+  margin: 0;
+  align-self: self-start;
+  display: none;
+  width: 100%;
+}
+
+.real-estate-buy-item:hover .real-estate-buy-item-description-hidden {
+  display: block;
+}
+
+
+.real-estate-buy-item-description-hidden-row {
+    font-size: 14px;
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+    width: 100%;
+    justify-content: space-between;
+}
+
+
+.real-estate-buy-item-description-hidden-row-text-bald {
+  font-weight: 700;
+}

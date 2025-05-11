@@ -158,8 +158,8 @@ let select = function () {
         selectedItems.push(text);
         let checkDiv = document.createElement('div');
         checkDiv.className = 'checkRounded';
-        let img = document.createElement('img');
-        img.src = 'img/checkRounded.svg';
+        let img = document.createElement('images');
+        img.src = 'images/checkRounded.svg';
         img.alt = 'Картинка галочки';
         checkDiv.appendChild(img);
         this.appendChild(checkDiv);
