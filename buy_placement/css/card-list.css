@@ -35,10 +35,21 @@
   background: transparent;
   border-radius: 50%;
   border: 1px solid rgb(221, 220, 219);
+  transition: 0.2s ease-in-out all;
+}
+
+.real-estate-header-buttons-list-element:hover {
+  border: 1px solid rgb(131, 131, 131);
+  transition: 0.2s ease-in-out all;
+}
+
+.button-switch-active {
+  border: 1px solid rgb(131, 131, 131);
+  transition: 0.2s ease-in-out all;
 }
 
 .real-estate-cards-list-column-table {
-  display: grid;
+  display: none; /*grid*/
   grid-template-columns: repeat(12, 1fr);
   padding: 0 25px;
   align-items: center;
@@ -217,7 +228,7 @@
 }
 
 .real-estate-cards-list-column {
-  display: flex;
+  display: none; /*flex*/
   flex-direction: column;
   gap: 25px;
 }
