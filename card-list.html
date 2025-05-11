@@ -1,12 +1,11 @@
-<!doctype html>
-<html class="no-js" lang="">
-
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Filter</title>
+  <meta charset="UTF-8">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/filter.css">
+  <link rel="stylesheet" href="css/card-list.css">
+
   <meta name="description" content="">
 
   <meta property="og:title" content="">
@@ -18,20 +17,14 @@
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" href="/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="icon.png">
-
-  <link rel="manifest" href="site.webmanifest">
-  <meta name="theme-color" content="#fafafa">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Fuggles&family=Inter:wght@100;400;800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:wght@500&family=Quicksand:wght@600&display=swap"
     rel="stylesheet">
+  <title>Card-list</title>
 </head>
-
 <body>
-
-<!-- Add your site or application content here -->
 <header class="header">
   <div class="header-wrapper">
     <div class="header-top">
@@ -386,197 +379,12 @@
       </div>
     </div>
   </section>
-
-
-  <section class="filter level-filter level-req">
-      <div class="filter-ui-group">
-        <div class="filter-button-group">
-          <button class="filter-button filter-button-small-filter" name="type" data-value="house" >Квартира</button>
-          <button class="filter-button filter-button-small-filter" name="type" data-value="commerce">Коммерческое помещение</button>
-          <button class="filter-button filter-button-small-filter" name="type" data-value="parking">Паркинг</button>
-          <button class="filter-button filter-button-small-filter" name="type" data-value="kladovaya">Кладовая</button>
-          <button class="filter-button filter-button-details-open" name="open">Все фильтры</button>
-        </div>
-        <div id="rangeSlider" class="range-slider">
-          <div class="number-group">
-            <div class="number-group-container">
-              <p class="number-group-container-text">от</p>
-              <input class="number-input small-filter-price-range" type="number" name="small_filter_price_range_min_number" value="0" min="0" max="50"/>
-            </div>
-            <div class="number-group-container">
-              <p class="number-group-container-text">до</p>
-              <input class="number-input small-filter-price-range" type="number" name="small_filter_price_range_max_number" value="50" min="0" max="50"/>
-              <p class="number-group-container-text"><!--м²-->₽</p>
-            </div>
-          </div>
-          <div class="range-group">
-            <input class="range-input small-filter-price-range" name="small_filter_price_range_min_range" value="0" min="0" max="50" step="1" type="range"/>
-            <input class="range-input small-filter-price-range" name="small_filter_price_range_max_range" value="50" min="0" max="50" step="1" type="range"/>
-          </div>
-        </div>
-        <div class="filter-button-group">
-          <button class="filter-button filter-button-details-open" name="open">Все фильтры</button>
-          <button class="filter-button"><span class="filter-button-offer-count">100</span> предложений</button>
-        </div>
-      </div>
-  </section>
-</main>
-<div class="filter-details-popup ">
-  <div class="container filter-container">
-    <div class="filter-header">
-      <img src="img/FRT_logo.svg" class="logo-img" alt="Логотип ФРТ">
-      <h2 class="filter-name">Фильтр</h2>
-      <button class="filter-button-close" name="close">
-        <img src="img/button-close.svg" alt="Кнопка закрытия" class="filter-button-close-icon">
-      </button>
-    </div>
-<!--    <div class="filter-block-applied">-->
-<!--      <h3 class="filter-block-applied-title">Примененные фильтры</h3>-->
-<!--      <div class="filter-block-applied-wrapper">-->
-<!--        <div class="filter-block-applied-wrapper-el">-->
-<!--          <div class="filter-block-applied-wrapper-el-text">-->
-<!--            от 8 444 800  ₽  до 23 803 650  ₽-->
-<!--          </div>-->
-<!--          <button class="filter-block-applied-wrapper-el-button-close">-->
-<!--            <img src="img/button-close.svg" alt="Кнопка закрытия" class="filter-button-close-icon">-->
-<!--          </button>-->
-<!--        </div>-->
-<!--        <div class="filter-block-applied-wrapper-el">-->
-<!--          <div class="filter-block-applied-wrapper-el-text">-->
-<!--            от 8 444 800  ₽  до 23 803 650  ₽-->
-<!--          </div>-->
-<!--          <button class="filter-block-applied-wrapper-el-button-close">-->
-<!--            <img src="img/button-close.svg" alt="Кнопка закрытия" class="filter-button-close-icon">-->
-<!--          </button>-->
-<!--        </div>-->
-<!--        <div class="filter-block-applied-wrapper-el">-->
-<!--          <div class="filter-block-applied-wrapper-el-text">-->
-<!--            от 8 444 800  ₽  до 23 803 650  ₽-->
-<!--          </div>-->
-<!--          <button class="filter-block-applied-wrapper-el-button-close">-->
-<!--            <img src="img/button-close.svg" alt="Кнопка закрытия" class="filter-button-close-icon">-->
-<!--          </button>-->
-<!--        </div>-->
-<!--        <div class="filter-block-applied-wrapper-el">-->
-<!--          <div class="filter-block-applied-wrapper-el-text">-->
-<!--            от 8 444 800  ₽  до 23 803 650  ₽-->
-<!--          </div>-->
-<!--          <button class="filter-block-applied-wrapper-el-button-close">-->
-<!--            <img src="img/button-close.svg" alt="Кнопка закрытия" class="filter-button-close-icon">-->
-<!--          </button>-->
-<!--        </div>-->
-<!--        <div class="filter-block-applied-wrapper-el">-->
-<!--          <div class="filter-block-applied-wrapper-el-text">-->
-<!--            от 8 444 800  ₽  до 23 803 650  ₽-->
-<!--          </div>-->
-<!--          <button class="filter-block-applied-wrapper-el-button-close">-->
-<!--            <img src="img/button-close.svg" alt="Кнопка закрытия" class="filter-button-close-icon">-->
-<!--          </button>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </div>-->
-    <div class="filter-block-common">
-      <div class="filter-button-group">
-        <button class="filter-button filter-button-big-filter" name="type" data-value="house">Квартира</button>
-        <button class="filter-button filter-button-big-filter" name="type" data-value="commerce">Коммерческое помещение</button>
-        <button class="filter-button filter-button-big-filter" name="type" data-value="parking">Паркинг</button>
-        <button class="filter-button filter-button-big-filter" name="type" data-value="kladovaya">Кладовая</button>
+  <section class="real-estate">
+    <div class="real-estate-container">
+      <div class="real-estate-header">
         <div class="select big-filter-select" name="big_filter_select">
           <div class="select__header">
-            <span class="select__current">Срок сдачи</span>
-            <div class="select__icon">
-              <svg viewBox="0 0 16 16" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M2.13003 5.16367C2.31578 4.95934 2.63201 4.94428 2.83633 5.13003L8
-               9.99997L13.1637 5.13003C13.368 4.94428 13.6842 4.95934 13.87 5.16367C14.0557 5.368 14.0407 5.68422 13.8363 5.86997L8.67267
-               10.7399C8.29125 11.0867 7.70875 11.0867 7.32733 10.7399L2.16366 5.86997C1.95933 5.68422 1.94427 5.368 2.13003 5.16367Z"
-                                                         fill="#141414"></path></svg>
-            </div>
-          </div>
-
-          <div class="select__body">
-            <div class="select__item-list">
-              <div class="select__item">Сразу</div>
-              <div class="select__item">1 квартал</div>
-              <div class="select__item">1 квартал</div>
-              <div class="select__item">1 квартал</div>
-              <div class="select__item">1 квартал</div>
-              <div class="select__item">1 квартал</div>
-              <div class="select__item">1 квартал</div>
-              <div class="select__item">1 квартал</div>
-              <div class="select__item">1 квартал</div>
-              <div class="select__item">1 квартал</div>
-              <div class="select__item">1 квартал</div>
-              <div class="select__item">1 квартал</div>
-              <div class="select__item">1 квартал</div>
-            </div>
-
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="filter-block-details">
-      <div class="filter-block-details-wrapper">
-        <h2 class="filter-block-details-wrapper-title">Регион</h2>
-        <div class="select big-filter-select" name="big_filter_select">
-            <div class="select__header select__multiply">
-              <span class="select__current">Апартаменты</span>
-              <div class="select__icon">
-                <svg viewBox="0 0 16 16" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M2.13003 5.16367C2.31578 4.95934 2.63201 4.94428 2.83633 5.13003L8
-               9.99997L13.1637 5.13003C13.368 4.94428 13.6842 4.95934 13.87 5.16367C14.0557 5.368 14.0407 5.68422 13.8363 5.86997L8.67267
-               10.7399C8.29125 11.0867 7.70875 11.0867 7.32733 10.7399L2.16366 5.86997C1.95933 5.68422 1.94427 5.368 2.13003 5.16367Z"
-                                                           fill="#141414"></path></svg>
-              </div>
-            </div>
-            <div class="select__body">
-              <div class="select__item-list">
-                <div class="select__item">Сразу</div>
-                <div class="select__item">1 квартал</div>
-                <div class="select__item">12 квартал</div>
-                <div class="select__item">13 квартал</div>
-                <div class="select__item">14 квартал</div>
-                <div class="select__item">15 квартал</div>
-                <div class="select__item">61 квартал</div>
-                <div class="select__item">16 квартал</div>
-                <div class="select__item">17 квартал</div>
-                <div class="select__item">18 квартал</div>
-                <div class="select__item">19 квартал</div>
-                <div class="select__item">11 квартал</div>
-                <div class="select__item">21 квартал</div>
-              </div>
-
-            </div>
-          </div>
-        <div class="filter-block-details-wrapper-range">
-          <h3 class="filter-block-details-wrapper-range-title">Площадь</h3>
-          <div id="rangeSlider1" class="range-slider">
-            <div class="number-group">
-              <div class="number-group-container">
-                <p class="number-group-container-text">от</p>
-                <input class="number-input big-filter-square-range" type="number" name="big_filter_square_range_min_number" value="0" min="0" max="50"/>
-              </div>
-              <div class="number-group-container">
-                <p class="number-group-container-text">до</p>
-                <input class="number-input big-filter-square-range" type="number" name="big_filter_square_range_max_number" value="50" min="0" max="50"/>
-                <p class="number-group-container-text"><!--м²-->₽</p>
-              </div>
-            </div>
-            <div class="range-group">
-              <input class="range-input big-filter-square-range" name="big_filter_square_range_min_range" value="0" min="0" max="50" step="1" type="range"/>
-              <input class="range-input big-filter-square-range" name="big_filter_square_range_max_range" value="50" min="0" max="50" step="1" type="range"/>
-            </div>
-          </div>
-        </div>
-        <div class="filter-button-group">
-          <button class="filter-button filter-button-big-filter" name="type_room" data-value="studio">Студия</button>
-          <button class="filter-button filter-button-big-filter" name="type_room" data-value="one-room-apartment">1</button>
-          <button class="filter-button filter-button-big-filter" name="type_room" data-value="two-room-apartment">2</button>
-          <button class="filter-button filter-button-big-filter" name="type_room" data-value="three-more-room-apartment">3+</button>
-        </div>
-      </div>
-      <div class="filter-block-details-wrapper">
-        <h2 class="filter-block-details-wrapper-title">ЖК</h2>
-        <div class="select big-filter-select" name="big_filter_select">
-          <div class="select__header  select__multiply">
-            <span class="select__current">Квартиры</span>
+            <span class="select__current">Дороже</span>
             <div class="select__icon">
               <svg viewBox="0 0 16 16" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M2.13003 5.16367C2.31578 4.95934 2.63201 4.94428 2.83633 5.13003L8
                9.99997L13.1637 5.13003C13.368 4.94428 13.6842 4.95934 13.87 5.16367C14.0557 5.368 14.0407 5.68422 13.8363 5.86997L8.67267
@@ -586,55 +394,78 @@
           </div>
           <div class="select__body">
             <div class="select__item-list">
-              <div class="select__item">Сразу</div>
-              <div class="select__item">1 квартал 1 квартал 1 квартал 1 квартал 1 квартал 1 квартал
-                1 квартал1 квартал1 квартал1 квартал1 квартал1 квартал</div>
-              <div class="select__item">2 квартал</div>
-              <div class="select__item">3 квартал</div>
-              <div class="select__item">4 квартал</div>
-              <div class="select__item">5 квартал</div>
-              <div class="select__item">6 квартал</div>
-              <div class="select__item">7 квартал</div>
-              <div class="select__item">8 квартал</div>
-              <div class="select__item">9 квартал</div>
-              <div class="select__item">10 квартал</div>
-              <div class="select__item">11 квартал</div>
-              <div class="select__item">12 квартал</div>
+              <div class="select__item">Дороже</div>
+              <div class="select__item">Дешевле</div>
+              <div class="select__item">С большей площадью</div>
+              <div class="select__item">С меньшей площадью</div>
             </div>
 
           </div>
         </div>
-        <div class="filter-block-details-wrapper-range">
-          <h3 class="filter-block-details-wrapper-range-title">Стоимость</h3>
-          <div id="rangeSlider2" class="range-slider">
-            <div class="number-group">
-              <div class="number-group-container">
-                <p class="number-group-container-text">от</p>
-                <input class="number-input big-filter-price-range" type="number" name="big_filter_price_range_min_number" value="0" min="0" max="50"/>
-              </div>
-              <div class="number-group-container">
-                <p class="number-group-container-text">до</p>
-                <input class="number-input big-filter-price-range" type="number" name="big_filter_price_range_max_number" value="50" min="0" max="50"/>
-                <p class="number-group-container-text"><!--м²-->₽</p>
+        <ul class="real-estate-header-buttons-list">
+          <li>
+            <button class="real-estate-header-buttons-list-element">
+              <img src="./img/button-icon-row.svg" alt="Иконка кнопки для отображения карточек в строку">
+            </button>
+          </li>
+          <li>
+            <button class="real-estate-header-buttons-list-element">
+              <img src="./img/button-icon-column.svg" alt="Иконка кнопки для отображения карточек в колонку">
+            </button>
+          </li>
+        </ul>
+      </div>
+      <ul class="real-estate-cards-list-row">
+        <a href="#">
+          <li class="real-estate-cards-list-item-row">
+            <div class="real-estate-cards-list-item-header">
+              <span class="real-estate-cards-list-item-header-address">
+                Васильево
+              </span>
+              <div class="real-estate-cards-list-item-header-controls">
+                <button class="real-estate-cards-list-item-header-controls-button-more real-estate-cards-list-item-header-button">
+                  <img src="img/real-estate-cards-list-item-header-controls-button-more-icon.svg" alt="Иконка кнопки больше">
+                </button>
+                <button class="real-estate-cards-list-item-header-controls-button-like real-estate-cards-list-item-header-button">
+                  <svg class="like-icon" width="39" height="36" viewBox="0 0 39 36" fill="none"
+                       xmlns="http://www.w3.org/2000/svg">
+                    <g class="heart">
+                      <path class="contour" d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18
+                          6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24
+                          6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27
+                          18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z"
+                            fill="rgb(221, 220, 219)"/>
+
+                      <path class="main-body" d="M12 9H9V12H12V9ZM15 12H12V15H15V12ZM18 9H15V12H18V9ZM12 15H9V18H12V15ZM15
+                          15H12V18H15V15ZM15 18H12V21H15V18ZM18 12H15V15H18V12ZM18 21H15V24H18V21ZM18 18H15V21H18V18ZM27
+                           9H30V12H27V9ZM24 9H27V12H24V9ZM27 12H30V15H27V12ZM24 12H27V15H24V12ZM21 9H24V12H21V9ZM27
+                           15H30V18H27V15ZM24 15H27V18H24V15ZM24 18H27V21H24V18ZM21 12H24V15H21V12ZM21 21H24V24H21V21ZM21
+                            18H24V21H21V18ZM21 21H18V24H21V21ZM21 24H18V27H21V24Z" fill="none"/>
+
+                      <path class="core"
+                            d="M18 15H15V18H18V15ZM21 15H24V18H21V15ZM21 15H18V18H21V15ZM21 12H18V15H21V12ZM21 18H18V21H21V18Z"
+                            fill="none"/>
+                    </g>
+                    <path class="sparks" d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33
+                           3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z" fill="var(--fill-color)"/>
+
+                  </svg>
+                </button>
               </div>
             </div>
-            <div class="range-group">
-              <input class="range-input big-filter-price-range" name="big_filter_price_range_min_range" value="0" min="0" max="50" step="1" type="range"/>
-              <input class="range-input big-filter-price-range" name="big_filter_price_range_max_range" value="50" min="0" max="50" step="1" type="range"/>
+            <div class="real-estate-cards-list-item-slider">
+              <img src="img/appart.svg" alt="Картинка схемы квартиры" class="real-estate-cards-list-item-slider-img">
             </div>
-          </div>
-        </div>
-      </div>
+            <div class="real-estate-cards-list-item-info">
+              <p class="real-estate-cards-list-item-info-price">20 226 015 ₽</p>
+
+            </div>
+          </li>
+        </a>
+      </ul>
     </div>
-    <div class="filter-block-controls">
-      <div class="filter-block-controls-wrapper container">
-        <a href="#" class="filter-block-controls-button-submit">249 предложений</a>
-        <button class="filter-block-controls-button-clear" name="clear">Очистить</button>
-      </div>
-    </div>
-    <br><br><br><br><br><br><br><br>
-  </div>
-</div>
+  </section>
+</main>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <footer class="footer">
   <div class="container">
@@ -750,24 +581,6 @@
     </div>
   </div>
 </footer>
-
 <script src="js/app.js"></script>
-<!--<script src="js/filter.js"></script>-->
-<script src="js/filter_class.js"></script>
-<template id="applied-filter-template">
-  <div class="filter-block-applied">
-    <h3 class="filter-block-applied-title">Применённые фильтры</h3>
-    <div class="filter-block-applied-wrapper"></div>
-  </div>
-</template>
-
-<template id="applied-filter-item-template">
-  <div class="filter-block-applied-wrapper-el">
-    <span class="filter-block-applied-wrapper-el-text"></span>
-    <button class="filter-block-applied-wrapper-el-button-close">
-      <img src="img/button-close.svg" alt="Закрыть" class="filter-button-close-icon">
-    </button>
-  </div>
-</template>
 </body>
 </html>

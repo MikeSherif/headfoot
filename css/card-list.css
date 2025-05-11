@@ -1,0 +1,66 @@
+.real-estate, .real-estate-container, .real-estate-header, .real-estate-cards-list {
+  width: 100%;
+}
+
+.real-estate-container {
+  display: flex;
+  flex-direction: column;
+  gap: 35px;
+  padding-bottom: 104px;
+  padding-top: 36px;
+}
+
+.real-estate-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.real-estate-header .select .select__header, .real-estate-header .select .select__body {
+  min-width: 280px;
+}
+
+.real-estate-header-buttons-list {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.real-estate-header-buttons-list-element {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border-radius: 50%;
+  border: 1px solid rgb(221, 220, 219);
+}
+
+.real-estate-cards-list-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.real-estate-cards-list-item-row {
+  max-width: 400px;
+  padding: 24px;
+  border: 1px solid rgb(221, 220, 219);
+  border-radius: 20px;
+}
+
+.real-estate-cards-list-item-row .real-estate-cards-list-item-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.real-estate-cards-list-item-row .real-estate-cards-list-item-header-button {
+  background: transparent;
+}
+
+.real-estate-cards-list-item-row .real-estate-cards-list-item-slider-img {
+  width: 300px;
+}
