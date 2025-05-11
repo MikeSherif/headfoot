@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../filter/css/filter.css">
+  <link rel="stylesheet" href="css/buy_placement_details.css">
+
+  <meta name="description" content="">
+
+  <meta property="og:title" content="">
+  <meta property="og:type" content="">
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:image:alt" content="">
+
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" href="/icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="../icon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fuggles&family=Inter:wght@100;400;800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:wght@500&family=Quicksand:wght@600&display=swap"
+    rel="stylesheet">
+  <title>Купить помещение</title>
+</head>
+<body>
+<header class="header">
+  <div class="header-wrapper">
+    <div class="header-top">
+      <div class="navbar">
+        <a class="navbar-brand" href="https://xn--p1aee.xn--p1ai/">
+          <img class="logo-img" src="../img/FRT_logo.svg" alt="Логотип шапки">
+        </a>
+        <div class="header-item header-wrap">
+          <a href="https://xn--p1aee.xn--p1ai/napravleniya/" class="catalog-link">
+            <div class="header-btn-catalog">
+
+              <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M0 1.4C0 0.626801 0.626801 0 1.4 0H18.2C18.9732 0 19.6 0.626801 19.6 1.4C19.6 2.1732 18.9732 2.8 18.2 2.8H1.4C0.626802 2.8 0 2.1732 0 1.4Z"
+                  fill="currentColor"></path>
+                <path
+                  d="M0 7C0 6.2268 0.626801 5.6 1.4 5.6H18.2C18.9732 5.6 19.6 6.2268 19.6 7C19.6 7.7732 18.9732 8.4 18.2 8.4H1.4C0.626802 8.4 0 7.7732 0 7Z"
+                  fill="currentColor"></path>
+                <path
+                  d="M1.4 11.2C0.626801 11.2 0 11.8268 0 12.6C0 13.3732 0.626802 14 1.4 14H18.2C18.9732 14 19.6 13.3732 19.6 12.6C19.6 11.8268 18.9732 11.2 18.2 11.2H1.4Z"
+                  fill="currentColor"></path>
+              </svg>
+              Наши проекты
+            </div>
+          </a>
+          <div class="header-item">
+            <div class="title-search-overlay">
+              <div id="title-search" class="title-search-wrap">
+                <div class="search-form-wrap ">
+                  <form action="/search/" class="search-form">
+                    <input id="title-search-input" class="form-control" type="text" name="q" placeholder="Поиск..."
+                           autocomplete="off">
+                    <label class="search-label">
+                      <img src="../img/search.svg" alt="Картинка поиска">
+                      <input class="search-submit" name="s" type="submit" value="">
+                    </label>
+                  </form>
+                  <div class="search-button search-button-close">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="32" height="48" fill="currentColor"
+                         class="search-button-close-icon" viewBox="0 0 16 16">
+                      <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                      <path
+                        d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="search-button-wrap">
+              <div class="search-button search-button-open">
+                <img src="../img/search.svg" alt="Картинка поиска">
+              </div>
+            </div>
+          </div>
+          <div class="hamburger" data-drawer-trigger aria-controls="drawer-name" aria-expanded="false">
+            <div class="header-icon">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <circle cx="1" cy="1" r="1" fill="currentColor"></circle>
+                <circle cx="1" cy="11" r="1" fill="currentColor"></circle>
+                <circle cx="11" cy="1" r="1" fill="currentColor"></circle>
+                <circle cx="11" cy="11" r="1" fill="currentColor"></circle>
+                <circle cx="6" cy="6" r="1" fill="currentColor"></circle>
+              </svg>
+            </div>
+          </div>
+        </div>
+        <div class="header-item nav-container">
+          <ul class="nav-list">
+            <li class="nav-item">
+              <a href="javascript:void(0);" class="nav-link" data-drawer-trigger aria-controls="grazhdanam_menu"
+                 aria-expanded="false">Гражданам</a>
+            </li>
+            <li class="nav-item">
+              <a href="javascript:void(0);" class="nav-link" data-drawer-trigger aria-controls="regionam_menu"
+                 aria-expanded="false">Регионам</a>
+            </li>
+            <li class="nav-item">
+              <a href="javascript:void(0);" class="nav-link" data-drawer-trigger aria-controls="biznes_menu"
+                 aria-expanded="false">Бизнесу</a>
+            </li>
+            <li class="nav-item">
+              <a href="javascript:void(0);" class="nav-link" data-drawer-trigger aria-controls="press_menu"
+                 aria-expanded="false">Прессе</a>
+            </li>
+            <li class="nav-item">
+              <a href="javascript:void(0);" class="nav-link" data-drawer-trigger aria-controls="fond_menu"
+                 aria-expanded="false">О Фонде</a>
+            </li>
+            <li class="nav-item">
+              <a href="javascript:void(0);" class="nav-link" data-drawer-trigger aria-controls="lk_menu"
+                 aria-expanded="false">Личные кабинеты</a>
+            </li>
+            <li class="nav-item nav-item-land">
+              <a href="/buy" class="nav-link">Купить недвижимость</a>
+            </li>
+            <li class="nav-item-more">
+              <div class="nav-item-more-button">
+                <span class="nav-link">Еще
+                  <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.62 5.22083L7.81667 9.02417C7.3675 9.47333 6.6325 9.47333 6.18334 9.02417L2.38 5.22083"
+                          stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
+                          stroke-linejoin="round">
+                    </path>
+                  </svg>
+                </span>
+              </div>
+              <ul class="more-nav">
+                <li class="nav-item">
+                  <a href="" class="nav-link" data-drawer-trigger aria-controls="fond_menu" aria-expanded="false">О
+                    Фонде</a>
+                </li>
+                <li class="nav-item">
+                  <a href="" class="nav-link" data-drawer-trigger aria-controls="lk_menu" aria-expanded="false">Личные
+                    кабинеты</a>
+                </li>
+                <li class="nav-item nav-item-land">
+                  <a href="/buy" class="nav-link">Купить недвижимость</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<main class="container">
+<section class="buy-placement-info-cards">
+  <ul class="buy-placement-info-cards-list">
+    <li class="buy-placement-info-cards-list-item">
+      <div class="buy-placement-info-cards-list-item-icon">
+        <img class="buy-placement-info-cards-list-item-icon" src="../img/placement_card-info.svg" alt="">
+      </div>
+      <div class="buy-placement-info-cards-list-item-description">
+        <h2 class="buy-placement-info-cards-list-item-description-title">Расположение</h2>
+        <p class="buy-placement-info-cards-list-item-description-text">Рядом набережная и три лесопарка</p>
+      </div>
+    </li>
+    <li class="buy-placement-info-cards-list-item">
+      <div class="buy-placement-info-cards-list-item-icon">
+        <img class="buy-placement-info-cards-list-item-icon" src="../img/placement_card-info.svg" alt="">
+      </div>
+      <div class="buy-placement-info-cards-list-item-description">
+        <h2 class="buy-placement-info-cards-list-item-description-title">Расположение</h2>
+        <p class="buy-placement-info-cards-list-item-description-text">Рядом набережная и три лесопарка</p>
+      </div>
+    </li>
+    <li class="buy-placement-info-cards-list-item">
+      <div class="buy-placement-info-cards-list-item-icon">
+        <img class="buy-placement-info-cards-list-item-icon" src="../img/placement_card-info.svg" alt="">
+      </div>
+      <div class="buy-placement-info-cards-list-item-description">
+        <h2 class="buy-placement-info-cards-list-item-description-title">Расположение</h2>
+        <p class="buy-placement-info-cards-list-item-description-text">Рядом набережная и три лесопарка</p>
+      </div>
+    </li>
+    <li class="buy-placement-info-cards-list-item">
+      <div class="buy-placement-info-cards-list-item-icon">
+        <img class="buy-placement-info-cards-list-item-icon" src="../img/placement_card-info.svg" alt="">
+      </div>
+      <div class="buy-placement-info-cards-list-item-description">
+        <h2 class="buy-placement-info-cards-list-item-description-title">Расположение</h2>
+        <p class="buy-placement-info-cards-list-item-description-text">Рядом набережная и три лесопарка</p>
+      </div>
+    </li>
+  </ul>
+</section>
+</main>
+<footer class="footer">
+  <div class="container">
+    <div class="footer_container">
+      <div class="footer_top">
+        <div class="footer_row">
+          <div class="footer_row_item">
+            <div class="footer_top_item">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M6.66667 4H13.3333C14.2538 4 15 4.74619 15 5.66667V15.439C15 15.8992 14.6269 16.2723 14.1667 16.2723C13.9582 16.2723 13.7573 16.1941 13.6036 16.0533L10.5631 13.2662C10.2445 12.9741 9.7555 12.9741 9.4369 13.2662L6.39644 16.0533C6.05717 16.3643 5.53003 16.3413 5.21904 16.0021C5.07815 15.8484 5 15.6475 5 15.439V5.66667C5 4.74619 5.74619 4 6.66667 4Z"
+                      fill="currentColor"></path>
+              </svg>
+              <a href="/napravleniya/o-fonde/karera/">Карьерный центр</a></div>
+          </div>
+          <div class="footer_row_item">
+            <div class="footer_top_item">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M13.3334 13.0263V10C13.3334 8.61929 12.2141 7.5 10.8334 7.5H5.13489V4.60526C5.13489 3.44256 6.07745 2.5 7.24015 2.5H17.0647C18.2274 2.5 19.17 3.44256 19.17 4.60526V10.9211L19.1839 14.8223C19.1847 15.0524 18.9988 15.2397 18.7687 15.2405C18.6577 15.2409 18.5511 15.1969 18.4726 15.1184L16.3805 13.0263H13.3334Z"
+                      fill="currentColor"></path>
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                      d="M1.65417 15V10.8333C1.65417 9.91282 2.40037 9.16663 3.32084 9.16663H9.98751C10.908 9.16663 11.6542 9.91282 11.6542 10.8333V15C11.6542 15.9204 10.908 16.6666 9.98751 16.6666H3.41728L2.38074 17.6587C2.2145 17.8178 1.95074 17.8121 1.79163 17.6458C1.7174 17.5683 1.67597 17.4651 1.67597 17.3577V15.2702C1.66163 15.1822 1.65417 15.092 1.65417 15ZM5.41667 11.6666C5.18655 11.6666 5 11.8532 5 12.0833C5 12.3134 5.18655 12.5 5.41667 12.5H9.58333C9.81345 12.5 10 12.3134 10 12.0833C10 11.8532 9.81345 11.6666 9.58333 11.6666H5.41667ZM7.5 13.75C7.5 13.5198 7.68655 13.3333 7.91667 13.3333H9.58333C9.81345 13.3333 10 13.5198 10 13.75C10 13.9801 9.81345 14.1666 9.58333 14.1666H7.91667C7.68655 14.1666 7.5 13.9801 7.5 13.75Z"
+                      fill="currentColor"></path>
+              </svg>
+              <a href="/ask_form/pre_page.php">Направить обращение</a>
+              <br>
+              <span style="flex-basis: 100%; font-size: 0.8rem;text-transform: lowercase;">для физических лиц</span>
+            </div>
+          </div>
+          <div class="footer_row_item">
+            <div class="footer_top_item">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M16.6667 15H6.66667C6.20643 15 5.83334 15.3731 5.83334 15.8333C5.83334 16.2935 6.20643 16.6666 6.66667 16.6666H16.6667V17.5C16.6667 18.0224 16.3682 18.3333 15.8333 18.3333H5.83334C4.378 18.3333 3.33334 17.2451 3.33334 15.8333V4.16663C3.33334 2.75482 4.378 1.66663 5.83334 1.66663H15.8333C16.3682 1.66663 16.6667 1.97754 16.6667 2.49996V15Z"
+                  fill="currentColor"></path>
+                <path class="path_bg_color" fill-rule="evenodd" clip-rule="evenodd"
+                      d="M11.668 11.2666H12.66L10.636 5.66663H9.53202L7.50002 11.2666H8.50002L8.89202 10.1386H11.276L11.668 11.2666ZM9.19602 9.27463L10.084 6.74663L10.972 9.27463H9.19602Z"
+                      fill="currentColor"></path>
+              </svg>
+              <a href="/glossary/">Глоссарий</a></div>
+          </div>
+          <div class="footer_row_item">
+            <div class="footer_top_item d-flex justify-content-xl-end">
+              <a href="/pages/protivodeystvie-korruptsii/">Противодействие коррупции</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="footer_middle">
+        <div class="footer_row">
+          <div class="footer_row_item">
+            <div class="footer_middle_item">
+              115088, Москва,<br>
+              ул. Шарикоподшипниковская, д.5
+            </div>
+          </div>
+          <div class="footer_row_item">
+            <div class="footer_middle_item">
+              <a href="tel:+78007007214">8 800 7007-214</a>
+              <div class="footer_middle_desc">
+                Звонок бесплатный. По будним дням с 08:00 до 18:00 по московскому времени.
+              </div>
+            </div>
+          </div>
+          <div class="footer_row_item">
+            <div class="footer_middle_item">
+              <span style="font-size: 0.8rem;">
+                <a href="mailto:mailbox@fondrt.ru">mailbox@fondrt.ru</a><br>для юридических лиц
+              <span>
+              <div class="footer_middle_desc">
+                <a href="mailto:acred@fondrt.ru" target="_blank">acred@fondrt.ru</a><br>для арбитражных управляющих
+              </div></span></span>
+            </div>
+          </div>
+          <div class="footer_row_item">
+            <div class="footer_middle_item">
+              <div class="footer__soc-icons">
+                <a class="footer__soc-icon" href="https://vk.com/frt_rf" id="bx_565502798_569" target="_blank">
+                  <svg viewBox="0 0 24 24" height="24" width="24" fill="currentColor" class="svg-vk"
+                       xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="m19.915 13.028c-.388-.49-.277-.708 0-1.146.005-.005 3.208-4.431 3.538-5.932l.002-.001c.164-.547 0-.949-.793-.949h-2.624c-.668 0-.976.345-1.141.731 0 0-1.336 3.198-3.226 5.271-.61.599-.892.791-1.225.791-.164 0-.419-.192-.419-.739v-5.105c0-.656-.187-.949-.74-.949h-4.126c-.419 0-.668.306-.668.591 0 .622.945.765 1.043 2.515v3.797c0 .832-.151.985-.486.985-.892 0-3.057-3.211-4.34-6.886-.259-.713-.512-1.001-1.185-1.001h-2.625c-.749 0-.9.345-.9.731 0 .682.892 4.073 4.148 8.553 2.17 3.058 5.226 4.715 8.006 4.715 1.671 0 1.875-.368 1.875-1.001 0-2.922-.151-3.198.686-3.198.388 0 1.056.192 2.616 1.667 1.783 1.749 2.076 2.532 3.074 2.532h2.624c.748 0 1.127-.368.909-1.094-.499-1.527-3.871-4.668-4.023-4.878z"></path>
+                  </svg>
+                </a>
+                <a class="footer__soc-icon" href="https://t.me/fondrt" id="bx_565502798_535" target="_blank">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M20.3988 4.38756C20.1659 4.19376 19.8847 4.06674 19.5853 4.02003C19.2859 3.97332 18.9794 4.00866 18.6985 4.12229L4.03557 10.0423C3.72199 10.1713 3.45507 10.3926 3.27022 10.6769C3.08537 10.9612 2.99135 11.2949 3.00063 11.6339C3.0099 11.9728 3.12204 12.3009 3.32216 12.5747C3.52227 12.8484 3.80091 13.0548 4.12107 13.1665L7.08705 14.198L8.74023 19.665C8.7627 19.738 8.7953 19.8075 8.83709 19.8715C8.84343 19.8813 8.85238 19.8886 8.85912 19.8981C8.9074 19.9655 8.96574 20.025 9.03211 20.0747C9.05099 20.089 9.06906 20.1025 9.08924 20.1153C9.16691 20.1668 9.25293 20.2045 9.34348 20.2267L9.35317 20.2275L9.35866 20.2298C9.41309 20.2409 9.4685 20.2465 9.52406 20.2466C9.5294 20.2466 9.53414 20.2441 9.53944 20.244C9.62327 20.2425 9.70638 20.2281 9.78579 20.2012C9.80427 20.1949 9.8201 20.1844 9.83803 20.1768C9.89724 20.1522 9.95335 20.1208 10.0052 20.083C10.0467 20.048 10.0882 20.0131 10.1297 19.9781L12.3406 17.5371L15.6382 20.0916C15.9285 20.3176 16.2859 20.4405 16.6538 20.4408C17.0393 20.4403 17.4129 20.3073 17.712 20.064C18.0111 19.8208 18.2175 19.4821 18.2966 19.1048L20.9661 6.00001C21.0266 5.70506 21.0058 5.39921 20.9059 5.11519C20.8059 4.83117 20.6307 4.57966 20.3988 4.38756ZM9.84849 14.4585C9.73504 14.5715 9.65749 14.7155 9.62556 14.8724L9.37232 16.103L8.7308 13.9813L12.057 12.2492L9.84849 14.4585ZM16.641 18.798L12.7442 15.7793C12.5811 15.6533 12.3766 15.5934 12.1714 15.6114C11.9661 15.6295 11.7752 15.7242 11.6367 15.8767L10.9286 16.6583L11.1789 15.4421L16.9742 9.64674C17.1125 9.50859 17.1968 9.32547 17.2118 9.13055C17.2267 8.93563 17.1714 8.74179 17.0558 8.58415C16.9402 8.42651 16.7719 8.31549 16.5815 8.2712C16.3911 8.22692 16.1911 8.25229 16.0178 8.34273L7.7005 12.6732L4.65322 11.558L19.3633 5.67318L16.641 18.798Z"
+                      fill="currentColor"></path>
+                  </svg>
+                </a>
+                <a class="footer__soc-icon" href="https://ok.ru/group/64270626324704" id="bx_565502798_570"
+                   target="_blank">
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                          d="M12.3091 12.3613C10.8208 12.3551 9.39526 11.7588 8.34286 10.7021C7.29046 9.64549 6.6965 8.21415 6.69034 6.71985C6.69422 5.21756 7.28501 3.77677 8.3357 2.70719C9.38639 1.63761 10.8131 1.02463 12.3091 1.00001C13.0539 0.998879 13.7915 1.14663 14.4788 1.43466C15.1661 1.72269 15.7895 2.14522 16.3124 2.67762C16.8355 3.21002 17.2476 3.84164 17.525 4.53563C17.8024 5.22965 17.9394 5.97213 17.9279 6.71985C17.9374 7.46332 17.7985 8.20116 17.5195 8.88988C17.2404 9.57864 16.8269 10.2043 16.3033 10.7301C15.7796 11.2558 15.1564 11.671 14.4705 11.9512C13.7845 12.2313 13.0496 12.3708 12.3091 12.3613ZM12.3091 4.36922C11.995 4.36905 11.6841 4.43234 11.3948 4.55535C11.1056 4.67835 10.8439 4.85851 10.6255 5.08518C10.407 5.31181 10.2362 5.58027 10.1233 5.87457C10.0103 6.16887 9.9575 6.48299 9.96798 6.79819C9.96333 7.10457 10.0213 7.40862 10.1384 7.69161C10.2554 7.9746 10.429 8.23046 10.6484 8.44343C10.8678 8.65638 11.1284 8.8219 11.4141 8.92976C11.6997 9.03759 12.0043 9.08549 12.3091 9.07045C12.612 9.07773 12.9133 9.0245 13.1955 8.91387C13.4777 8.80322 13.7353 8.63738 13.9531 8.42597C14.1709 8.21455 14.3447 7.96177 14.4644 7.68235C14.5841 7.40289 14.6473 7.10237 14.6503 6.79819C14.6608 6.48299 14.608 6.16887 14.495 5.87457C14.3821 5.58027 14.2113 5.31181 13.9928 5.08518C13.7744 4.85851 13.5127 4.67835 13.2235 4.55535C12.9342 4.43234 12.6233 4.36905 12.3091 4.36922ZM14.5723 17.0626L17.7719 20.1967C17.9205 20.3459 18.0384 20.523 18.1189 20.7179C18.1994 20.9129 18.2408 21.1218 18.2408 21.3328C18.2408 21.5438 18.1994 21.7528 18.1189 21.9477C18.0384 22.1427 17.9205 22.3198 17.7719 22.469C17.6335 22.6352 17.4604 22.7689 17.2648 22.8607C17.0693 22.9524 16.8561 23 16.6403 23C16.4245 23 16.2113 22.9524 16.0158 22.8607C15.8203 22.7689 15.6472 22.6352 15.5087 22.469L12.3091 19.3348L9.1876 22.469C9.03577 22.6247 8.85323 22.747 8.65167 22.828C8.45012 22.9089 8.23396 22.9468 8.017 22.9391C7.58442 22.9229 7.17078 22.7568 6.84642 22.469C6.69776 22.3198 6.57983 22.1427 6.49938 21.9477C6.41892 21.7528 6.37751 21.5438 6.37751 21.3328C6.37751 21.1218 6.41892 20.9129 6.49938 20.7179C6.57983 20.523 6.69776 20.3459 6.84642 20.1967L10.1241 17.0626C8.95306 16.6952 7.82731 16.1958 6.76838 15.5738C6.40673 15.3357 6.14897 14.9683 6.0475 14.5462C5.94603 14.1241 6.00846 13.6791 6.2221 13.3015C6.34119 13.1119 6.49747 12.9485 6.68143 12.8213C6.86539 12.6942 7.07319 12.6059 7.29219 12.562C7.51118 12.518 7.7368 12.5192 7.95532 12.5655C8.17384 12.6118 8.38068 12.7023 8.56328 12.8314C9.70552 13.5232 11.0142 13.8888 12.3482 13.8888C13.6821 13.8888 14.9908 13.5232 16.1331 12.8314C16.3157 12.7023 16.5225 12.6118 16.741 12.5655C16.9595 12.5192 17.1851 12.518 17.4041 12.562C17.6231 12.6059 17.8309 12.6942 18.0149 12.8213C18.1989 12.9485 18.3552 13.1119 18.4742 13.3015C18.6955 13.6699 18.7702 14.1085 18.6834 14.5298C18.5966 14.951 18.3547 15.3239 18.006 15.5738C16.9198 16.1961 15.7682 16.6954 14.5723 17.0626Z"
+                          fill="currentColor"></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__copyright">
+          © 2025 Все права защищены.
+        </div>
+        <div class="footer__ref">
+          <a href="/upload/Политика ППК ФРТ по обработке ПДн (ред.4).pdf">Политика обработки персональных данных</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+<script src="js/app.js"></script>
+</body>
+</html>
