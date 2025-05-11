@@ -1,0 +1,234 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+h1, h2, h3, h4, h5, h6, p, button, ul, li, ol {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+
+
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный цвет */
+    z-index: 999; /* Должен быть ниже, чем у попапа */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease-in-out, visibility 0.2s ease-in-out;
+}
+
+.need-consult-popup {
+    width: 30%;
+    height: fit-content;
+    background: #FFFFFF;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000; /* Указываем высокий z-index для отображения поверх остальных элементов */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Добавляем тень для эффекта */
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.popup__active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup__content {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    padding: 60px 30px;
+    box-sizing: border-box;
+}
+
+.popup__button__close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    width: 32px;
+    height: 32px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.popup__title {
+    color: #2B3888;
+    font-family: "Montserrat", Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 24px;
+    text-align: left;
+}
+
+.popup__description {
+    font-family: "Montserrat", Montserrat, sans-serif;
+    font-size: 20px;
+    color: rgb(173, 173, 173);
+    font-weight: 400;
+    line-height: 24px;
+    width: 100%;
+}
+
+.popup__form {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+}
+
+.popup__input {
+    box-sizing: border-box;
+    font-family: "Montserrat", Montserrat, sans-serif;
+    font-size: 20px;
+    color: rgb(173, 173, 173);
+    font-weight: 400;
+    line-height: 24px;
+    width: 100%;
+    height: 70px;
+    background: rgb(255, 255, 255);
+    border: 2px solid rgb(173, 173, 173);
+    padding: 0 14px 0 14px;
+    margin: 0;
+    margin-block: 10px;
+}
+
+.popup__input::placeholder, .popup__textarea::placeholder {
+    color: rgb(173, 173, 173);
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.popup__input:focus-visible, .popup__textarea:focus-visible {
+    outline: none;
+}
+
+.popup__input__label {
+    position: relative;
+    font-family: "Montserrat", Montserrat, sans-serif;
+    font-size: 20px;
+    color: #2B3888;
+    font-weight: 600;
+    line-height: 24px;
+    padding-bottom: 10px;
+}
+
+.popup__input__label::after {
+    content: "*";
+    position: absolute;
+    top: 0;
+    right: -15px;
+    color: #FF6224;
+    font-size: 20px;
+}
+
+.popup__field:nth-child(3) .popup__input__label::after {
+    content: "";
+}
+
+.popup__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    font-family: "Montserrat", Montserrat, sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 24px;
+    width: 100%;
+    height: 70px;
+    background: #FF6224;
+    border-color: transparent;
+    padding: 0;
+    cursor: pointer;
+    transition: all 0.1s ease-in-out;
+}
+
+.popup__button:hover, .get-consult-button:hover {
+    background: rgba(255, 98, 36, 0.9);
+    transition: all 0.1s ease-in-out;
+}
+
+.popup__message {
+    display: none;
+    width: 100%;
+    margin-top: 30px;
+    text-align: center;
+}
+
+.popup__message__button__close {
+    display: flex;
+    margin: 70px 0 30px 0;
+    align-items: center;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    font-family: "Montserrat", Montserrat, sans-serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 24px;
+    width: 100%;
+    height: 70px;
+    background: rgb(173, 173, 173);
+    border-color: transparent;
+    padding: 0;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1400px) {
+    .need-consult-popup {
+        width: 50%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .need-consult-popup {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .need-consult-popup {
+        position: relative;
+        margin-top: -25px;
+        width: 100%;
+    }
+
+    .popup__content {
+        gap: 20px;
+        padding: 30px 15px;
+    }
+
+    .popup__title {
+        font-size: 24px;
+    }
+
+    .popup__description {
+        font-size: 16px;
+    }
+
+    .popup__form {
+        gap: 14px;
+    }
+
+    .popup__input {
+        height: 45px;
+    }
+
+    .popup__button {
+        font-size: 20px;
+        height: 40px;
+    }
+}
