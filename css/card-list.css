@@ -38,13 +38,12 @@
 }
 
 .real-estate-cards-list-row {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
 }
 
 .real-estate-cards-list-item-row {
-  max-width: 400px;
   padding: 24px;
   border: 1px solid rgb(221, 220, 219);
   border-radius: 20px;
@@ -55,12 +54,121 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  height: 48px;
 }
+
+.real-estate-cards-list-item-row:hover  .real-estate-cards-list-item-header-address-wrapper-hidden {
+  display: block;
+  transition: 0.3s ease-in-out all;
+}
+
+.real-estate-cards-list-item-row .real-estate-cards-list-item-header-address-wrapper-visible, .real-estate-cards-list-item-row .real-estate-cards-list-item-header-address-wrapper-hidden {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 180px;
+  transition: 0.3s ease-in-out all;
+}
+
+.real-estate-cards-list-item-row .real-estate-cards-list-item-header-address {
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 12px;
+  color: rgb(20, 20, 20);
+}
+
+.real-estate-cards-list-item-row .real-estate-cards-list-item-header-address-additional,  .real-estate-cards-list-item-row .real-estate-cards-list-item-header-address-wrapper-hidden-text{
+  font-size: 12px;
+  line-height: 12px;
+  color: #8c94a8;
+  font-weight: 400;
+}
+
+.real-estate-cards-list-item-row .real-estate-cards-list-item-header-address-wrapper-hidden {
+  display: none;
+  transition: 0.3s ease-in-out all;
+}
+
 
 .real-estate-cards-list-item-row .real-estate-cards-list-item-header-button {
   background: transparent;
 }
 
 .real-estate-cards-list-item-row .real-estate-cards-list-item-slider-img {
-  width: 300px;
+  width: 100%;
+  max-height: 225px;
+}
+
+.real-estate-cards-list-item-info-container {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.real-estate-cards-list-item-info-price {
+  font-size: 20px;
+  font-weight: 600;
+  color: rgb(20, 20, 20);
+  letter-spacing: .015em;
+  line-height: 1.2;
+}
+
+.real-estate-cards-list-item-info-mortgage {
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: .015em;
+  line-height: 12px;
+  margin-top: 4px;
+  text-overflow: ellipsis;
+}
+
+.real-estate-cards-list-item-row .real-estate-cards-list-item-info-specification {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+  font-size: 12px;
+  font-weight: 500;
+  margin-top: 12px;
+  color: rgb(20, 20, 20);
+  letter-spacing: .015em;
+  line-height: 12px;
+}
+
+.real-estate-cards-list-item-tag-list {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 12px;
+}
+
+.real-estate-cards-list-item-tag-list-item {
+  lign-items: center;
+  background-color: #f4f6fb;
+  border-radius: 12px;
+  color: #282d3c;
+  display: flex;
+  flex-shrink: 0;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: -.005em;
+  line-height: 12px;
+  overflow: hidden;
+  padding: 6px 12px;
+  pointer-events: all;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+
+@media (max-width: 1225px) {
+  .real-estate-cards-list-row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 992px) {
+  .real-estate-cards-list-row {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
