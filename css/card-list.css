@@ -160,6 +160,17 @@
   user-select: none;
 }
 
+.real-estate-button-more {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  width: 300px;
+  border: 1px solid rgb(221, 220, 219);
+  background-color: transparent;
+  border-radius: 20px;
+  height: 48px;
+  margin: auto;
+}
 
 @media (max-width: 1225px) {
   .real-estate-cards-list-row {
