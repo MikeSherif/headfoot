@@ -172,3 +172,17 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+@media (max-width: 768px) {
+  .real-estate-cards-list-row {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .real-estate-header .select .select__header, .real-estate-header .select .select__body {
+    min-width: 180px;
+  }
+}
+
+
