@@ -7,7 +7,7 @@ html {
 }
 
 .buy-placement-card-container {
-  height: 90vh;
+  height: 100vh;
 }
 
 .swiper {
@@ -19,12 +19,12 @@ html {
 
 .swiper-wrapper {
   /* Оставляем стили Swiper, но добавляем высоту для слайдов */
-  height: auto; /* Или укажите фиксированную высоту, если нужно */
+  height: 80vh; /* Или укажите фиксированную высоту, если нужно */
 }
 
 .swiper-slide img {
   width: 100%;
-  height: auto;
+  height: 100%;
   display: block; /* Убираем лишние отступы под изображениями */
 }
 
