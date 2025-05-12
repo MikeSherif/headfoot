@@ -7,14 +7,15 @@ html {
 }
 
 .buy-placement-card-container {
-  height: 100vh;
+  height: auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
 .swiper {
-  height: 100%;
+  height: auto;
+  max-height: 700px;
   width: 50%;
   position: relative; /* Убедимся, что контейнер является контекстом для вложенных элементов */
 }
@@ -22,12 +23,18 @@ html {
 
 .swiper-wrapper {
   /* Оставляем стили Swiper, но добавляем высоту для слайдов */
-  height: 80vh; /* Или укажите фиксированную высоту, если нужно */
+  height: auto; /* Или укажите фиксированную высоту, если нужно */
+
+}
+
+.swiper-slide {
+  height: auto;
 }
 
 .swiper-slide img {
   width: 100%;
   height: 100%;
+  max-height: 600px;
   display: block; /* Убираем лишние отступы под изображениями */
 }
 
@@ -38,7 +45,8 @@ html {
   justify-content: center;
   align-items: center;
   gap: 10px;
-  margin: auto;
+  margin: 15px auto 0 auto;
+
   background-color: #f4f6fb;
   border-radius: 20px;
 }
@@ -70,8 +78,8 @@ html {
   flex-direction: column;
   gap: 25px;
   width: 40%;
-  height: 700px;
-  margin-top: 150px;
+  max-height: 700px;
+  align-self: center;
 }
 
 .buy-placement-card-info-wrapper {
@@ -179,6 +187,7 @@ html {
 
 .buy-placement-info-cards {
   margin-bottom: 50px;
+  margin-top: 12em;
 }
 
 .buy-placement-info-cards, .buy-placement-info-cards-list {
@@ -190,7 +199,7 @@ html {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 25px;
-}
+  }
 
 .buy-placement-info-cards-list-item {
   display: flex;
@@ -265,6 +274,10 @@ html {
     height: fit-content;
     width: 100%;
     margin-top: 40px;
+  }
+
+  .buy-placement-info-cards {
+    margin-top: 3em;
   }
 }
 
