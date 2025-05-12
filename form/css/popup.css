@@ -1,0 +1,179 @@
+/*Попап*/
+.need-help-popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Полупрозрачный черный цвет */
+    z-index: 999; /* Должен быть ниже, чем у попапа */
+  }
+  
+  .need-help-popup {
+    display: none;
+    width: 1072px;
+    height: 704px;
+    background: #FFFFFF;
+    border-radius: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1000; /* Указываем высокий z-index для отображения поверх остальных элементов */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Добавляем тень для эффекта */
+  }
+  
+  .popup__content {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    padding: 60px 80px;
+    box-sizing: border-box;
+  }
+  
+  .popup__title {
+    color: #2B3888;
+    font-family: "Montserrat", Montserrat, sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+  }
+  
+  .popup__form {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+  }
+  
+  .popup__input {
+    box-sizing: border-box;
+    font-family: "Montserrat", Montserrat, sans-serif;
+    font-size: 20px;
+    color: #2B3888;
+    font-weight: 400;
+    line-height: 24px;
+    width: 340.65px;
+    height: 70px;
+    border-radius: 20px;
+    background: rgb(255, 255, 255);
+    border: 1px solid #2B3888;
+    padding: 0 28px 0 28px;
+    margin: 0;
+  }
+  
+  .popup__input::placeholder, .popup__textarea::placeholder {
+    color: #2B3888;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  
+  .popup__input:focus-visible, .popup__textarea:focus-visible {
+    outline: none;
+  }
+  
+  
+  .popup__textarea {
+    box-sizing: border-box;
+    font-family: "Montserrat", Montserrat, sans-serif;
+    color: #2B3888;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 24px;
+    width: 909.33px;
+    height: 180px;
+    border-radius: 20px;
+    border: 1px solid #2B3888;
+    background: rgb(255, 255, 255);
+    padding: 28px;
+    margin: 0;
+    resize: none;
+  }
+  
+  .popup__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    font-family: Montserrat;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 24px;
+    width: 389px;
+    height: 70px;
+    border-radius: 20px;
+    background: #FF6224;
+    border-color: transparent;
+    padding: 0;
+    margin: auto;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  .popup__button:hover {
+    background: #af4319;
+  }
+  
+  .popup__message {
+    display: block !important;
+    width: 920px;
+    margin-inline: auto;
+    margin-top: 130px;
+    text-align: center;
+  }
+
+  .send-application {
+    
+    width: 48px;
+    height: 48px;
+    position: fixed;
+    right: 1.875rem;
+    bottom: 1.875rem;
+    z-index: 20;
+    border-radius: 50%;
+  }
+  
+  .send-application-button {
+    width: 100%;
+    height: 100%;
+    background-color: #161E70;
+    border: none;
+    border-radius: 50%;
+    outline: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .send-application-image {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .real-estate-buy-item-description-hidden {
+    margin: 0;
+    align-self: self-start;
+    display: none;
+    width: 100%;
+  }
+  
+  .real-estate-buy-item:hover .real-estate-buy-item-description-hidden {
+    display: block;
+  }
+  
+  
+  .real-estate-buy-item-description-hidden-row {
+      font-size: 14px;
+      display: grid;
+      grid-template-columns: 2fr 1fr 2fr;
+      width: 100%;
+      justify-content: space-between;
+  }
+  
+  
+  .real-estate-buy-item-description-hidden-row-text-bald {
+    font-weight: 700;
+  }
