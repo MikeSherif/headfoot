@@ -1,6 +1,67 @@
 html {
   font-family: "Montserrat", Montserrat, sans-serif;
 }
+
+.main {
+  flex-direction: column;
+}
+
+.buy-placement-card-container {
+  height: 90vh;
+}
+
+.swiper {
+  height: 100%;
+  width: 50%;
+  position: relative; /* Убедимся, что контейнер является контекстом для вложенных элементов */
+}
+
+
+.swiper-wrapper {
+  /* Оставляем стили Swiper, но добавляем высоту для слайдов */
+  height: auto; /* Или укажите фиксированную высоту, если нужно */
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: auto;
+  display: block; /* Убираем лишние отступы под изображениями */
+}
+
+.swiper-types-scrollbar {
+  width: fit-content;
+  height: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: auto;
+  background-color: #f4f6fb;
+  border-radius: 20px;
+}
+
+.swiper-types-scrollbar-el {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 16px;
+  padding: 8px 16px;
+  border-radius: 20px;
+  color: #282d3c;
+  background-color: transparent;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.swiper-types-scrollbar-el.active,  .swiper-types-scrollbar-el:hover{
+  background: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
 .buy-placement-info-cards, .buy-placement-info-cards-list {
   width: 100%;
   color: #141414;

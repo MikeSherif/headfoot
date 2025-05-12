@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="../css/swiper-bundle.min.css">
   <link rel="stylesheet" href="../css/style.css">
-  <link rel="stylesheet" href="../filter/css/filter.css">
   <link rel="stylesheet" href="css/buy_placement_details.css">
 
   <meta name="description" content="">
@@ -152,7 +152,28 @@
     </div>
   </div>
 </header>
-<main class="container">
+<main class="container main">
+  <section class="buy-placement-card-container">
+    <!-- Slider main container -->
+    <div class="swiper">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide"><img src="../img/appart.svg" alt=""></div>
+        <div class="swiper-slide"><img src="../img/appart.svg" alt=""></div>
+        <div class="swiper-slide"><img src="../img/appart.svg" alt=""></div>
+        <div class="swiper-slide"><img src="../img/appart.svg" alt=""></div>
+      </div>
+      <!-- If we need scrollbar -->
+      <div class="swiper-types-scrollbar">
+        <button class="swiper-types-scrollbar-el">Планировка</button>
+        <button class="swiper-types-scrollbar-el">Вид из окна</button>
+        <button class="swiper-types-scrollbar-el">План этажа</button>
+        <button class="swiper-types-scrollbar-el">Генплан</button>
+      </div>
+    </div>
+  </section>
+
 <section class="buy-placement-info-cards">
   <ul class="buy-placement-info-cards-list">
     <li class="buy-placement-info-cards-list-item">
@@ -308,6 +329,7 @@
     </div>
   </div>
 </footer>
+<script src="../js/swiper-bundle.min.js"></script>
 <script src="js/app.js"></script>
 </body>
 </html>
