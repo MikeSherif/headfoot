@@ -8,6 +8,9 @@ html {
 
 .buy-placement-card-container {
   height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .swiper {
@@ -62,6 +65,122 @@ html {
   border-color: #007bff;
 }
 
+.buy-placement-card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  width: 40%;
+  height: 700px;
+  margin-top: 150px;
+}
+
+.buy-placement-card-info-wrapper {
+  width: 100%;
+  padding: 24px;
+  border: 1px solid rgb(221, 220, 219);
+  border-radius: 20px;
+  box-shadow: 0 0 1px #282d3c08, 0 0 2px #282d3c0d, 0 -4px 8px #282d3c0a;
+}
+
+.buy-placement-card-info-header {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.buy-placement-card-info-header-text {
+  color: #282d3c;
+  font-size: 20px;
+  font-weight: 500;
+  letter-spacing: -.015em;
+  line-height: 24px;
+}
+
+.buy-placement-card-info-header-old-price {
+  color: #8c94a8;
+  font-size: 14px;
+  letter-spacing: -.01em;
+  line-height: 14px;
+  margin-left: 12px;
+  text-decoration: line-through;
+}
+
+.buy-placement-card-info-header-tag-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.buy-placement-card-info-header-tag {
+  align-items: center;
+  border-radius: 12px;
+  display: flex;
+  flex-grow: 0;
+  font-size: 11px;
+  font-weight: 500;
+  gap: 8px;
+  height: 24px;
+  letter-spacing: -.005em;
+  line-height: 12px;
+  padding: 6px 12px;
+  transition: background-color .3s, color .3s;
+}
+
+.buy-placement-card-info-header-tag-status {
+  background-color: #282d3c;
+  color: #fff;
+}
+
+.buy-placement-card-info-header-tag-sale {
+  background-color: #feedc1;
+  color: #b57600;
+}
+
+
+.buy-placement-card-info-footer {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 10px;
+  padding-bottom: 5px;
+}
+
+.buy-placement-card-info-footer-button {
+  width: 50%;
+  background: transparent;
+  border: 1px solid rgb(221, 220, 219);
+  border-radius: 24px;
+  font-size: 14px;
+  font-weight: 500;
+  height: 48px;
+  line-height: 14px;
+  transition: 0.2s ease-in-out all;
+}
+
+.buy-placement-card-info-footer-button:hover {
+  border: 1px solid rgb(131, 131, 131);
+  transition: 0.2s ease-in-out all;
+}
+
+.buy-placement-card-info-footer-text {
+  color: #8c94a8;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: -.005em;
+  line-height: 12px;
+  margin-top: 16px;
+  text-align: center;
+}
+
+
+
+
+
+.buy-placement-info-cards {
+  margin-bottom: 50px;
+}
+
 .buy-placement-info-cards, .buy-placement-info-cards-list {
   width: 100%;
   color: #141414;
@@ -102,6 +221,13 @@ html {
   letter-spacing: -.01em;
   line-height: 18px;
   margin-top: 8px;
+}
+
+@media (max-width: 1200px) {
+  .buy-placement-info-cards-list {
+    grid-template-columns: repeat(2, 1fr);
+
+  }
 }
 
 
