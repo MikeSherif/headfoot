@@ -46,6 +46,10 @@
   border-radius: 25px;
 }
 
+.zhk-img-container-multiply .zhk-img-container-item {
+  min-height: 100%;
+}
+
 .zhk-description {
   display: flex;
   flex-direction: column;
