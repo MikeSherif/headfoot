@@ -272,6 +272,8 @@ a {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
   font-family: 'Montserrat', sans-serif;
   color: #161E70;
   overflow-x: hidden;
@@ -908,6 +910,7 @@ body {
 
 /*-------------FOOTER---------------*/
 .footer {
+  margin-top: auto;
   border-top: 1px solid #77798C;
   padding-bottom: 1rem;
   background-color: #2B3888 !important;

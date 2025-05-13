@@ -221,6 +221,7 @@ class ButtonsOpen extends BaseInput {
 
   buttonClick = () => {
     document.querySelector('.filter-details-popup').style.display = 'block';
+    document.querySelector('main').style.display = 'none';
     document.querySelector('.footer').style.display = 'none';
   }
 
@@ -255,6 +256,7 @@ class ButtonsClose extends BaseInput {
 
   buttonClick = () => {
     document.querySelector('.filter-details-popup').style.display = 'none';
+    document.querySelector('main').style.display = 'flex';
     document.querySelector('.footer').style.display = 'block';
   }
 

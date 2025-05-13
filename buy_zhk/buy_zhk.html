@@ -1,13 +1,15 @@
-<!doctype html>
-<html class="no-js" lang="">
-
+<!DOCTYPE html>
+<html lang="ru">
 <head>
-  <meta charset="utf-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Filter</title>
+  <link rel="stylesheet" href="../css/swiper-bundle.min.css">
   <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../filter/css/filter.css">
   <link rel="stylesheet" href="../form/css/popup.css">
-  <link rel="stylesheet" href="css/filter.css">
+  <link rel="stylesheet" href="../buy_placement/css/buy_placement.css">
+  <link rel="stylesheet" href="css/style-zhk.css">
+
   <meta name="description" content="">
 
   <meta property="og:title" content="">
@@ -19,20 +21,14 @@
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="icon" href="/icon.svg" type="image/svg+xml">
   <link rel="apple-touch-icon" href="../icon.png">
-
-  <link rel="manifest" href="../site.webmanifest">
-  <meta name="theme-color" content="#fafafa">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
     href="https://fonts.googleapis.com/css2?family=Fuggles&family=Inter:wght@100;400;800&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:wght@500&family=Quicksand:wght@600&display=swap"
     rel="stylesheet">
+  <title>Купить помещение</title>
 </head>
-
 <body>
-
-<!-- Add your site or application content here -->
 <header class="header">
   <div class="header-wrapper">
     <div class="header-top">
@@ -159,266 +155,393 @@
     </div>
   </div>
 </header>
-<main class="container">
-  <section class="drawer" id="drawer-name" data-drawer-target="">
-    <div class="drawer__overlay" data-drawer-close="" tabindex="-1"></div>
-    <div class="drawer__wrapper">
-      <div class="drawer__header">
-        <button class="drawer__close" data-drawer-close="" aria-label="Close Drawer">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="white" class="bi bi-x" viewBox="0 0 16 16" width="30"
-               height="30">
-            <path
-              d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"></path>
-          </svg>
-        </button>
-      </div>
-      <div class="drawer__content">
-        <ul id="more-nav-1">
-          <li class="nav-item">
-            <a href="javascript:void(0);" class="nav-link root-item" data-drawer-trigger=""
-               aria-controls="grazhdanam_menu" aria-expanded="false">
-              Гражданам </a>
-          </li>
-          <li class="nav-item">
-            <a href="javascript:void(0);" class="nav-link root-item" data-drawer-trigger=""
-               aria-controls="regionam_menu" aria-expanded="false">
-              Регионам </a>
-          </li>
-          <li class="nav-item">
-            <a href="javascript:void(0);" class="nav-link root-item" data-drawer-trigger="" aria-controls="biznes_menu"
-               aria-expanded="false">
-              Бизнесу </a>
-          </li>
-          <li class="nav-item">
-            <a href="javascript:void(0);" class="nav-link root-item" data-drawer-trigger="" aria-controls="press_menu"
-               aria-expanded="false">
-              Прессе </a>
-          </li>
-          <li class="nav-item">
-            <a href="javascript:void(0);" class="nav-link root-item" data-drawer-trigger="" aria-controls="fond_menu"
-               aria-expanded="false">
-              О Фонде </a>
-          </li>
-          <li class="nav-item">
-            <a href="javascript:void(0);" class="nav-link root-item" data-drawer-trigger="" aria-controls="lk_menu"
-               aria-expanded="true">
-              Личные кабинеты </a>
-          </li>
-          <li class="nav-item nav-item-land">
-            <!-- <images src="/local/templates/main_catalog/images/Дом.png" alt=""> -->
-            <a href="/buy" class="nav-link root-item">
-              Купить недвижимость
-            </a>
-          </li>
-        </ul>
-        <div class="drawer__content-bottom">
-          <div class="drawer__content-bottom-row">
-            <div class="header_item">
-              <a href="https://xn--p1aee.xn--p1ai/napravleniya/" class="catalog-link">
-                <div class="header-btn-catalog">
-                  <svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path
-                      d="M0 1.4C0 0.626801 0.626801 0 1.4 0H18.2C18.9732 0 19.6 0.626801 19.6 1.4C19.6 2.1732 18.9732 2.8 18.2 2.8H1.4C0.626802 2.8 0 2.1732 0 1.4Z"
-                      fill="currentColor"></path>
-                    <path
-                      d="M0 7C0 6.2268 0.626801 5.6 1.4 5.6H18.2C18.9732 5.6 19.6 6.2268 19.6 7C19.6 7.7732 18.9732 8.4 18.2 8.4H1.4C0.626802 8.4 0 7.7732 0 7Z"
-                      fill="currentColor"></path>
-                    <path
-                      d="M1.4 11.2C0.626801 11.2 0 11.8268 0 12.6C0 13.3732 0.626802 14 1.4 14H18.2C18.9732 14 19.6 13.3732 19.6 12.6C19.6 11.8268 18.9732 11.2 18.2 11.2H1.4Z"
-                      fill="currentColor"></path>
-                  </svg>
-                  Наши проекты
-                </div>
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+<main class="container ">
+  <section class="breadcrumbs">
+    <ul class="breadcrumbs-list">
+      <a href="#" class="breadcrumbs-list-item">Главная ></a>
+      <a href="#" class="breadcrumbs-list-item">Купить ></a>
+      <a href="#" class="breadcrumbs-list-item"> Купить недвижимость</a>
+    </ul>
   </section>
-  <section class="drawer drawer_submenu" id="grazhdanam_menu" data-drawer-target="">
-    <div class="drawer__overlay" data-drawer-close="" tabindex="-1"></div>
-    <div class="drawer__wrapper">
-      <div class="drawer__header">
-        <p class="drawer__header_title container"><span>Гражданам<span></span></span></p>
-        <button class="drawer__close" data-drawer-close="" aria-label="Close Drawer">
-          <svg xmlns="http://www.w3.org/2000/svg" fill="white" class="bi bi-x" viewBox="0 0 16 16" width="30"
-               height="30">
-            <path
-              d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"></path>
-          </svg>
-        </button>
-      </div>
-      <div class="drawer__content">
-        <div class="container">
-          <div class="row">
-            <div class="header_submenu_wrap is_parent">
-              <div class="header_submenu_title submenu_control">
-                Переселение из аварийного жилья
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M11.62 5.22083L7.81667 9.02417C7.3675 9.47333 6.6325 9.47333 6.18334 9.02417L2.38 5.22083"
-                        stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
-                        stroke-linejoin="round"></path>
-                </svg>
-              </div>
-              <ul class="header_submenu header_submenu_list">
-                <li>
-                  <a href="/napravleniya/pereselenie/">
-                    О переселении </a>
-                </li>
-                <li>
-                  <a href="/napravleniya/reestr-obrashcheniy/">
-                    Реестр обращений </a>
-                </li>
-              </ul>
-            </div>
-
-            <div class="header_submenu_wrap is_parent">
-              <div class="header_submenu_title submenu_control">
-                Капитальный ремонт многоквартирных домов
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M11.62 5.22083L7.81667 9.02417C7.3675 9.47333 6.6325 9.47333 6.18334 9.02417L2.38 5.22083"
-                        stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
-                        stroke-linejoin="round"></path>
-                </svg>
-              </div>
-              <ul class="header_submenu header_submenu_list">
-                <li>
-                  <a href="/napravleniya/kapitalnyy-remont/">
-                    О капитальном ремонте </a>
-                </li>
-                <li>
-                  <a href="https://xn--80aq1a.xn--p1aee.xn--p1ai/overhaul" target="_blank">
-                    Мониторинг реализации региональных программ капремонта </a>
-                </li>
-                <li>
-                  <a href="/napravleniya/zamena-liftovogo-oborudovaniya/">
-                    Замена лифтового оборудования </a>
-                </li>
-                <li>
-                  <a href="/napravleniya/energoeffektivnyy-kapremont/">
-                    Энергоэффективный капремонт </a>
-                </li>
-                <li>
-                  <a href="/napravleniya/limity/">
-                    Лимиты </a>
-                </li>
-                <li>
-                  <a href="/napravleniya/pomoshchnik-ekr/">
-                    Помощник ЭКР </a>
-                </li>
-              </ul>
-            </div>
-
-            <div class="header_submenu_wrap is_parent">
-              <div class="header_submenu_title submenu_control">
-                Восстановление прав дольщиков
-                <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M11.62 5.22083L7.81667 9.02417C7.3675 9.47333 6.6325 9.47333 6.18334 9.02417L2.38 5.22083"
-                        stroke="currentColor" stroke-width="1.5" stroke-miterlimit="10" stroke-linecap="round"
-                        stroke-linejoin="round"></path>
-                </svg>
-              </div>
-              <ul class="header_submenu header_submenu_list">
-                <li>
-                  <a href="/napravleniya/vosstanovlenie-prav/">
-                    О восстановлении прав дольщиков </a>
-                </li>
-                <li>
-                  <a href="https://xn--p1aee.xn--p1ai/compensation/rtus/" target="_blank">
-                    Проверить включение требований в реестр Фонда </a>
-                </li>
-                <li>
-                  <a href="/napravleniya/chlenam-zhilishchno-stroitelnogo-kooperativa/">
-                    Членам ЖСК </a>
-                </li>
-                <li>
-                  <a href="https://xn--p1aee.xn--p1ai/lk/" target="_blank">
-                    Личный кабинет дольщика </a>
-                </li>
-                <li>
-                  <a href="https://xn--p1aee.xn--p1ai/projects/" target="_blank">
-                    Проекты Фонда </a>
-                </li>
-                <li>
-                  <a href="https://214.xn--p1aee.xn--p1ai/lk/profile-user" target="_blank">
-                    Получить выплату </a>
-                </li>
-              </ul>
-            </div>
-
-            <div class="header_submenu_wrap ">
-              <ul class="header_submenu">
-                <li class="header_submenu_title">
-                  <a href="/vopros-otvet/">
-                    Вопрос-ответ </a>
-                </li>
-              </ul>
-            </div>
-
-            <div class="header_submenu_wrap ">
-              <ul class="header_submenu">
-                <li class="header_submenu_title">
-                  <a href="/#">
-                    Купить недвижимость </a>
-                </li>
-                <li class="header_submenu_title">
-                  <a href="https://xn--p1aee.xn--p1ai/buy/" target="_blank">
-                    Выбрать ЖК </a>
-                </li>
-                <li class="header_submenu_title">
-                  <a href="https://xn--p1aee.xn--p1ai/buy/" target="_blank">
-                    Квартиру в новостройке </a>
-                </li>
-                <li class="header_submenu_title">
-                  <a href="https://xn--p1aee.xn--p1ai/grazhdanam/kalkulyator_rascheta-doley-mezhdu-pokupatelyami/"
-                     target="_blank">
-                    Калькулятор определения долевой собственности </a>
-                </li>
-              </ul>
-            </div>
-
-            <div class="header_priemnaya_row">
-              <a class="ask_form_text_page" href="/ask_form/pre_page.php">Направить обращение</a>
-            </div>
-          </div>
-
-        </div>
-      </div>
+  <section class="zhk">
+    <h1 class="zhk-title">Купить недвижимость в ЖК <span class="zhk-title-name">Видный Город</span></h1>
+    <div class="zhk-img-container zhk-img-container-multiply">
+      <img class="zhk-img-container-item" src="../img/zhk-image.webp" alt="Картинка жилого комплекса">
+      <img class="zhk-img-container-item" src="../img/zhk-image.webp" alt="Картинка жилого комплекса">
+      <img class="zhk-img-container-item" src="../img/zhk-image.webp" alt="Картинка жилого комплекса">
+    </div>
+    <div class="zhk-description">
+      <h2 class="zhk-description-title">О проекте</h2>
+      <p class="zhk-description-text">В новостройке представлены редкие форматы квартир:
+        двухуровневые квартиры, квартиры с террасами, квартиры с французскими окнами
+        и хайфлэты - эксклюзивный формат жилья, включающий в себя высокие потолки,
+        большие окна и верхний этаж с великолепным видом.</p>
+      <h3 class="zhk-description-subtitle">Особенности планировок</h3>
+      <p class="zhk-description-text">В новостройке представлены редкие форматы квартир:
+        двухуровневые квартиры, квартиры с террасами, квартиры с французскими окнами
+        и хайфлэты - эксклюзивный формат жилья, включающий в себя высокие потолки,
+        большие окна и верхний этаж с великолепным видом.</p>
+      <h3 class="zhk-description-subtitle">Особенности планировок</h3>
+      <p class="zhk-description-text">В новостройке представлены редкие форматы квартир:
+        двухуровневые квартиры, квартиры с террасами, квартиры с французскими окнами
+        и хайфлэты - эксклюзивный формат жилья, включающий в себя высокие потолки,
+        большие окна и верхний этаж с великолепным видом.</p>
+      <h3 class="zhk-description-subtitle">Особенности планировок</h3>
+      <p class="zhk-description-text">В новостройке представлены редкие форматы квартир:
+        двухуровневые квартиры, квартиры с террасами, квартиры с французскими окнами
+        и хайфлэты - эксклюзивный формат жилья, включающий в себя высокие потолки,
+        большие окна и верхний этаж с великолепным видом.</p>
     </div>
   </section>
   <section class="filter level-filter level-req">
-      <div class="filter-ui-group">
-        <div class="filter-button-group">
-          <button class="filter-button filter-button-small-filter" name="type" data-value="house" >Квартира</button>
-          <button class="filter-button filter-button-small-filter" name="type" data-value="commerce">Коммерческое помещение</button>
-          <button class="filter-button filter-button-small-filter" name="type" data-value="parking">Паркинг</button>
-          <button class="filter-button filter-button-small-filter" name="type" data-value="kladovaya">Кладовая</button>
-          <button class="filter-button filter-button-details-open" name="open">Все фильтры</button>
-        </div>
-        <div id="rangeSlider" class="range-slider">
-          <div class="number-group">
-            <div class="number-group-container">
-              <p class="number-group-container-text">от</p>
-              <input class="number-input small-filter-price-range" type="number" name="small_filter_price_range_min_number" value="0" min="0" max="50"/>
-            </div>
-            <div class="number-group-container">
-              <p class="number-group-container-text">до</p>
-              <input class="number-input small-filter-price-range" type="number" name="small_filter_price_range_max_number" value="50" min="0" max="50"/>
-              <p class="number-group-container-text"><!--м²-->₽</p>
-            </div>
+    <div class="filter-ui-group">
+      <div class="filter-button-group">
+        <button class="filter-button filter-button-small-filter" name="type" data-value="house" >Квартира</button>
+        <button class="filter-button filter-button-small-filter" name="type" data-value="commerce">Коммерческое помещение</button>
+        <button class="filter-button filter-button-small-filter" name="type" data-value="parking">Паркинг</button>
+        <button class="filter-button filter-button-small-filter" name="type" data-value="kladovaya">Кладовая</button>
+        <button class="filter-button filter-button-details-open" name="open">Все фильтры</button>
+      </div>
+      <div id="rangeSlider" class="range-slider">
+        <div class="number-group">
+          <div class="number-group-container">
+            <p class="number-group-container-text">от</p>
+            <input class="number-input small-filter-price-range" type="number" name="small_filter_price_range_min_number" value="0" min="0" max="50"/>
           </div>
-          <div class="range-group">
-            <input class="range-input small-filter-price-range" name="small_filter_price_range_min_range" value="0" min="0" max="50" step="1" type="range"/>
-            <input class="range-input small-filter-price-range" name="small_filter_price_range_max_range" value="50" min="0" max="50" step="1" type="range"/>
+          <div class="number-group-container">
+            <p class="number-group-container-text">до</p>
+            <input class="number-input small-filter-price-range" type="number" name="small_filter_price_range_max_number" value="50" min="0" max="50"/>
+            <p class="number-group-container-text"><!--м²-->₽</p>
           </div>
         </div>
-        <div class="filter-button-group">
-          <button class="filter-button filter-button-details-open" name="open">Все фильтры</button>
-          <button class="filter-button"><span class="filter-button-offer-count">100</span> предложений</button>
+        <div class="range-group">
+          <input class="range-input small-filter-price-range" name="small_filter_price_range_min_range" value="0" min="0" max="50" step="1" type="range"/>
+          <input class="range-input small-filter-price-range" name="small_filter_price_range_max_range" value="50" min="0" max="50" step="1" type="range"/>
         </div>
       </div>
+      <div class="filter-button-group">
+        <button class="filter-button filter-button-details-open" name="open">Все фильтры</button>
+        <button class="filter-button"><span class="filter-button-offer-count">100</span> предложений</button>
+      </div>
+    </div>
   </section>
+  <section class="zhk-cards-list">
+    <ul class="real-estate-cards-list-row">
+      <a href="#">
+        <li class="real-estate-cards-list-item-row">
+          <div class="real-estate-cards-list-item-header">
+            <div class="real-estate-cards-list-item-header-address-wrapper">
+              <div class="real-estate-cards-list-item-header-address-wrapper-visible">
+                  <span class="real-estate-cards-list-item-header-address">
+                Васильево
+                  </span>
+                <span class="real-estate-cards-list-item-header-address-additional">
+                  корп.20, секц. 1 dafdafdfsafffeaefeefwfefawstye45syAjdigajldgash
+                </span>
+              </div>
+              <div class="real-estate-cards-list-item-header-address-wrapper-hidden">
+                <p class="real-estate-cards-list-item-header-address-wrapper-hidden-text">Дата сдачи до 30 апр. 2027</p>
+              </div>
+            </div>
+            <div class="real-estate-cards-list-item-header-controls">
+              <button
+                class="real-estate-cards-list-item-header-controls-button-more real-estate-cards-list-item-header-button">
+                <img src="../img/real-estate-cards-list-item-header-controls-button-more-icon.svg"
+                     alt="Иконка кнопки больше">
+              </button>
+              <button
+                class="real-estate-cards-list-item-header-controls-button-like real-estate-cards-list-item-header-button">
+                <svg class="like-icon" width="26" height="26" viewBox="0 0 39 36" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                  <g class="heart">
+                    <path class="contour" d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18
+                          6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24
+                          6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27
+                          18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z"
+                          fill="rgb(221, 220, 219)"/>
+
+                    <path class="main-body" d="M12 9H9V12H12V9ZM15 12H12V15H15V12ZM18 9H15V12H18V9ZM12 15H9V18H12V15ZM15
+                          15H12V18H15V15ZM15 18H12V21H15V18ZM18 12H15V15H18V12ZM18 21H15V24H18V21ZM18 18H15V21H18V18ZM27
+                           9H30V12H27V9ZM24 9H27V12H24V9ZM27 12H30V15H27V12ZM24 12H27V15H24V12ZM21 9H24V12H21V9ZM27
+                           15H30V18H27V15ZM24 15H27V18H24V15ZM24 18H27V21H24V18ZM21 12H24V15H21V12ZM21 21H24V24H21V21ZM21
+                            18H24V21H21V18ZM21 21H18V24H21V21ZM21 24H18V27H21V24Z" fill="none"/>
+
+                    <path class="core"
+                          d="M18 15H15V18H18V15ZM21 15H24V18H21V15ZM21 15H18V18H21V15ZM21 12H18V15H21V12ZM21 18H18V21H21V18Z"
+                          fill="none"/>
+                  </g>
+                  <path class="sparks" d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33
+                           3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z" fill="var(--fill-color)"/>
+
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="real-estate-cards-list-item-slider">
+            <img src="../img/appart.svg" alt="Картинка схемы квартиры" class="real-estate-cards-list-item-slider-img">
+          </div>
+          <div class="real-estate-cards-list-item-info">
+            <div class="real-estate-cards-list-item-info-container">
+              <p class="real-estate-cards-list-item-info-price">20 226 015 ₽</p>
+              <p class="real-estate-cards-list-item-info-mortgage">В ипотеку - от <span
+                class="real-estate-cards-list-item-info-mortgage-per-month-price">234 000</span>₽/мес</p>
+            </div>
+            <ul class="real-estate-cards-list-item-info-specification">
+              <li class="real-estate-cards-list-item-info-specification-item">
+                5 комн.
+              </li>
+              <li class="real-estate-cards-list-item-info-specification-item">
+                273,46 м²
+              </li>
+              <li class="real-estate-cards-list-item-info-specification-item">
+                27 этаж из 28
+              </li>
+            </ul>
+          </div>
+          <ul class="real-estate-cards-list-item-tag-list">
+            <li class="real-estate-cards-list-item-tag-list-item">
+              без отделки
+            </li>
+          </ul>
+        </li>
+      </a>
+      <a href="#">
+        <li class="real-estate-cards-list-item-row">
+          <div class="real-estate-cards-list-item-header">
+            <div class="real-estate-cards-list-item-header-address-wrapper">
+              <div class="real-estate-cards-list-item-header-address-wrapper-visible">
+                  <span class="real-estate-cards-list-item-header-address">
+                Васильево
+                  </span>
+                <span class="real-estate-cards-list-item-header-address-additional">
+                  корп.20, секц. 1 dafdafdfsafffeaefeefwfefawstye45syAjdigajldgash
+                </span>
+              </div>
+              <div class="real-estate-cards-list-item-header-address-wrapper-hidden">
+                <p class="real-estate-cards-list-item-header-address-wrapper-hidden-text">Дата сдачи до 30 апр. 2027</p>
+              </div>
+            </div>
+            <div class="real-estate-cards-list-item-header-controls">
+              <button
+                class="real-estate-cards-list-item-header-controls-button-more real-estate-cards-list-item-header-button">
+                <img src="../img/real-estate-cards-list-item-header-controls-button-more-icon.svg"
+                     alt="Иконка кнопки больше">
+              </button>
+              <button
+                class="real-estate-cards-list-item-header-controls-button-like real-estate-cards-list-item-header-button">
+                <svg class="like-icon" width="26" height="26" viewBox="0 0 39 36" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                  <g class="heart">
+                    <path class="contour" d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18
+                          6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24
+                          6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27
+                          18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z"
+                          fill="rgb(221, 220, 219)"/>
+
+                    <path class="main-body" d="M12 9H9V12H12V9ZM15 12H12V15H15V12ZM18 9H15V12H18V9ZM12 15H9V18H12V15ZM15
+                          15H12V18H15V15ZM15 18H12V21H15V18ZM18 12H15V15H18V12ZM18 21H15V24H18V21ZM18 18H15V21H18V18ZM27
+                           9H30V12H27V9ZM24 9H27V12H24V9ZM27 12H30V15H27V12ZM24 12H27V15H24V12ZM21 9H24V12H21V9ZM27
+                           15H30V18H27V15ZM24 15H27V18H24V15ZM24 18H27V21H24V18ZM21 12H24V15H21V12ZM21 21H24V24H21V21ZM21
+                            18H24V21H21V18ZM21 21H18V24H21V21ZM21 24H18V27H21V24Z" fill="none"/>
+
+                    <path class="core"
+                          d="M18 15H15V18H18V15ZM21 15H24V18H21V15ZM21 15H18V18H21V15ZM21 12H18V15H21V12ZM21 18H18V21H21V18Z"
+                          fill="none"/>
+                  </g>
+                  <path class="sparks" d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33
+                           3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z" fill="var(--fill-color)"/>
+
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="real-estate-cards-list-item-slider">
+            <img src="../img/appart.svg" alt="Картинка схемы квартиры" class="real-estate-cards-list-item-slider-img">
+          </div>
+          <div class="real-estate-cards-list-item-info">
+            <div class="real-estate-cards-list-item-info-container">
+              <p class="real-estate-cards-list-item-info-price">20 226 015 ₽</p>
+              <p class="real-estate-cards-list-item-info-mortgage">В ипотеку - от <span
+                class="real-estate-cards-list-item-info-mortgage-per-month-price">234 000</span>₽/мес</p>
+            </div>
+            <ul class="real-estate-cards-list-item-info-specification">
+              <li class="real-estate-cards-list-item-info-specification-item">
+                5 комн.
+              </li>
+              <li class="real-estate-cards-list-item-info-specification-item">
+                273,46 м²
+              </li>
+              <li class="real-estate-cards-list-item-info-specification-item">
+                27 этаж из 28
+              </li>
+            </ul>
+          </div>
+          <ul class="real-estate-cards-list-item-tag-list">
+            <li class="real-estate-cards-list-item-tag-list-item">
+              без отделки
+            </li>
+          </ul>
+        </li>
+      </a>
+      <a href="#">
+        <li class="real-estate-cards-list-item-row">
+          <div class="real-estate-cards-list-item-header">
+            <div class="real-estate-cards-list-item-header-address-wrapper">
+              <div class="real-estate-cards-list-item-header-address-wrapper-visible">
+                  <span class="real-estate-cards-list-item-header-address">
+                Васильево
+                  </span>
+                <span class="real-estate-cards-list-item-header-address-additional">
+                  корп.20, секц. 1 dafdafdfsafffeaefeefwfefawstye45syAjdigajldgash
+                </span>
+              </div>
+              <div class="real-estate-cards-list-item-header-address-wrapper-hidden">
+                <p class="real-estate-cards-list-item-header-address-wrapper-hidden-text">Дата сдачи до 30 апр. 2027</p>
+              </div>
+            </div>
+            <div class="real-estate-cards-list-item-header-controls">
+              <button
+                class="real-estate-cards-list-item-header-controls-button-more real-estate-cards-list-item-header-button">
+                <img src="../img/real-estate-cards-list-item-header-controls-button-more-icon.svg"
+                     alt="Иконка кнопки больше">
+              </button>
+              <button
+                class="real-estate-cards-list-item-header-controls-button-like real-estate-cards-list-item-header-button">
+                <svg class="like-icon" width="26" height="26" viewBox="0 0 39 36" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                  <g class="heart">
+                    <path class="contour" d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18
+                          6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24
+                          6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27
+                          18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z"
+                          fill="rgb(221, 220, 219)"/>
+
+                    <path class="main-body" d="M12 9H9V12H12V9ZM15 12H12V15H15V12ZM18 9H15V12H18V9ZM12 15H9V18H12V15ZM15
+                          15H12V18H15V15ZM15 18H12V21H15V18ZM18 12H15V15H18V12ZM18 21H15V24H18V21ZM18 18H15V21H18V18ZM27
+                           9H30V12H27V9ZM24 9H27V12H24V9ZM27 12H30V15H27V12ZM24 12H27V15H24V12ZM21 9H24V12H21V9ZM27
+                           15H30V18H27V15ZM24 15H27V18H24V15ZM24 18H27V21H24V18ZM21 12H24V15H21V12ZM21 21H24V24H21V21ZM21
+                            18H24V21H21V18ZM21 21H18V24H21V21ZM21 24H18V27H21V24Z" fill="none"/>
+
+                    <path class="core"
+                          d="M18 15H15V18H18V15ZM21 15H24V18H21V15ZM21 15H18V18H21V15ZM21 12H18V15H21V12ZM21 18H18V21H21V18Z"
+                          fill="none"/>
+                  </g>
+                  <path class="sparks" d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33
+                           3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z" fill="var(--fill-color)"/>
+
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="real-estate-cards-list-item-slider">
+            <img src="../img/appart.svg" alt="Картинка схемы квартиры" class="real-estate-cards-list-item-slider-img">
+          </div>
+          <div class="real-estate-cards-list-item-info">
+            <div class="real-estate-cards-list-item-info-container">
+              <p class="real-estate-cards-list-item-info-price">20 226 015 ₽</p>
+              <p class="real-estate-cards-list-item-info-mortgage">В ипотеку - от <span
+                class="real-estate-cards-list-item-info-mortgage-per-month-price">234 000</span>₽/мес</p>
+            </div>
+            <ul class="real-estate-cards-list-item-info-specification">
+              <li class="real-estate-cards-list-item-info-specification-item">
+                5 комн.
+              </li>
+              <li class="real-estate-cards-list-item-info-specification-item">
+                273,46 м²
+              </li>
+              <li class="real-estate-cards-list-item-info-specification-item">
+                27 этаж из 28
+              </li>
+            </ul>
+          </div>
+          <ul class="real-estate-cards-list-item-tag-list">
+            <li class="real-estate-cards-list-item-tag-list-item">
+              без отделки
+            </li>
+          </ul>
+        </li>
+      </a>
+      <a href="#">
+        <li class="real-estate-cards-list-item-row">
+          <div class="real-estate-cards-list-item-header">
+            <div class="real-estate-cards-list-item-header-address-wrapper">
+              <div class="real-estate-cards-list-item-header-address-wrapper-visible">
+                  <span class="real-estate-cards-list-item-header-address">
+                Васильево
+                  </span>
+                <span class="real-estate-cards-list-item-header-address-additional">
+                  корп.20, секц. 1 dafdafdfsafffeaefeefwfefawstye45syAjdigajldgash
+                </span>
+              </div>
+              <div class="real-estate-cards-list-item-header-address-wrapper-hidden">
+                <p class="real-estate-cards-list-item-header-address-wrapper-hidden-text">Дата сдачи до 30 апр. 2027</p>
+              </div>
+            </div>
+            <div class="real-estate-cards-list-item-header-controls">
+              <button
+                class="real-estate-cards-list-item-header-controls-button-more real-estate-cards-list-item-header-button">
+                <img src="../img/real-estate-cards-list-item-header-controls-button-more-icon.svg"
+                     alt="Иконка кнопки больше">
+              </button>
+              <button
+                class="real-estate-cards-list-item-header-controls-button-like real-estate-cards-list-item-header-button">
+                <svg class="like-icon" width="26" height="26" viewBox="0 0 39 36" fill="none"
+                     xmlns="http://www.w3.org/2000/svg">
+                  <g class="heart">
+                    <path class="contour" d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 15H6V18H9V15ZM18
+                          6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 24H15V27H18V24ZM27 6H30V9H27V6ZM24
+                          6H27V9H24V6ZM30 9H33V12H30V9ZM30 12H33V15H30V12ZM30 15H33V18H30V15ZM21 6H24V9H21V6ZM27
+                          18H30V21H27V18ZM24 21H27V24H24V21ZM21 24H24V27H21V24ZM21 27H18V30H21V27ZM21 9H18V12H21V9Z"
+                          fill="rgb(221, 220, 219)"/>
+
+                    <path class="main-body" d="M12 9H9V12H12V9ZM15 12H12V15H15V12ZM18 9H15V12H18V9ZM12 15H9V18H12V15ZM15
+                          15H12V18H15V15ZM15 18H12V21H15V18ZM18 12H15V15H18V12ZM18 21H15V24H18V21ZM18 18H15V21H18V18ZM27
+                           9H30V12H27V9ZM24 9H27V12H24V9ZM27 12H30V15H27V12ZM24 12H27V15H24V12ZM21 9H24V12H21V9ZM27
+                           15H30V18H27V15ZM24 15H27V18H24V15ZM24 18H27V21H24V18ZM21 12H24V15H21V12ZM21 21H24V24H21V21ZM21
+                            18H24V21H21V18ZM21 21H18V24H21V21ZM21 24H18V27H21V24Z" fill="none"/>
+
+                    <path class="core"
+                          d="M18 15H15V18H18V15ZM21 15H24V18H21V15ZM21 15H18V18H21V15ZM21 12H18V15H21V12ZM21 18H18V21H21V18Z"
+                          fill="none"/>
+                  </g>
+                  <path class="sparks" d="M36 13H39V16H36V13ZM27 27H30V30H27V27ZM18 33H21V36H18V33ZM9 27H12V30H9V27ZM24 0H27V3H24V0ZM33
+                           3H36V6H33V3ZM3 3H6V6H3V3ZM12 0H15V3H12V0ZM0 13H3V16H0V13Z" fill="var(--fill-color)"/>
+
+                </svg>
+              </button>
+            </div>
+          </div>
+          <div class="real-estate-cards-list-item-slider">
+            <img src="../img/appart.svg" alt="Картинка схемы квартиры" class="real-estate-cards-list-item-slider-img">
+          </div>
+          <div class="real-estate-cards-list-item-info">
+            <div class="real-estate-cards-list-item-info-container">
+              <p class="real-estate-cards-list-item-info-price">20 226 015 ₽</p>
+              <p class="real-estate-cards-list-item-info-mortgage">В ипотеку - от <span
+                class="real-estate-cards-list-item-info-mortgage-per-month-price">234 000</span>₽/мес</p>
+            </div>
+            <ul class="real-estate-cards-list-item-info-specification">
+              <li class="real-estate-cards-list-item-info-specification-item">
+                5 комн.
+              </li>
+              <li class="real-estate-cards-list-item-info-specification-item">
+                273,46 м²
+              </li>
+              <li class="real-estate-cards-list-item-info-specification-item">
+                27 этаж из 28
+              </li>
+            </ul>
+          </div>
+          <ul class="real-estate-cards-list-item-tag-list">
+            <li class="real-estate-cards-list-item-tag-list-item">
+              без отделки
+            </li>
+          </ul>
+        </li>
+      </a>
+    </ul>
+  </section>
+
 </main>
 <div class="send-application">
   <button class="send-application-button">
@@ -473,51 +596,51 @@
         <img src="../img/button-close.svg" alt="Кнопка закрытия" class="filter-button-close-icon">
       </button>
     </div>
-<!--    <div class="filter-block-applied">-->
-<!--      <h3 class="filter-block-applied-title">Примененные фильтры</h3>-->
-<!--      <div class="filter-block-applied-wrapper">-->
-<!--        <div class="filter-block-applied-wrapper-el">-->
-<!--          <div class="filter-block-applied-wrapper-el-text">-->
-<!--            от 8 444 800  ₽  до 23 803 650  ₽-->
-<!--          </div>-->
-<!--          <button class="filter-block-applied-wrapper-el-button-close">-->
-<!--            <images src="images/button-close.svg" alt="Кнопка закрытия" class="filter-button-close-icon">-->
-<!--          </button>-->
-<!--        </div>-->
-<!--        <div class="filter-block-applied-wrapper-el">-->
-<!--          <div class="filter-block-applied-wrapper-el-text">-->
-<!--            от 8 444 800  ₽  до 23 803 650  ₽-->
-<!--          </div>-->
-<!--          <button class="filter-block-applied-wrapper-el-button-close">-->
-<!--            <images src="images/button-close.svg" alt="Кнопка закрытия" class="filter-button-close-icon">-->
-<!--          </button>-->
-<!--        </div>-->
-<!--        <div class="filter-block-applied-wrapper-el">-->
-<!--          <div class="filter-block-applied-wrapper-el-text">-->
-<!--            от 8 444 800  ₽  до 23 803 650  ₽-->
-<!--          </div>-->
-<!--          <button class="filter-block-applied-wrapper-el-button-close">-->
-<!--            <images src="images/button-close.svg" alt="Кнопка закрытия" class="filter-button-close-icon">-->
-<!--          </button>-->
-<!--        </div>-->
-<!--        <div class="filter-block-applied-wrapper-el">-->
-<!--          <div class="filter-block-applied-wrapper-el-text">-->
-<!--            от 8 444 800  ₽  до 23 803 650  ₽-->
-<!--          </div>-->
-<!--          <button class="filter-block-applied-wrapper-el-button-close">-->
-<!--            <images src="images/button-close.svg" alt="Кнопка закрытия" class="filter-button-close-icon">-->
-<!--          </button>-->
-<!--        </div>-->
-<!--        <div class="filter-block-applied-wrapper-el">-->
-<!--          <div class="filter-block-applied-wrapper-el-text">-->
-<!--            от 8 444 800  ₽  до 23 803 650  ₽-->
-<!--          </div>-->
-<!--          <button class="filter-block-applied-wrapper-el-button-close">-->
-<!--            <images src="images/button-close.svg" alt="Кнопка закрытия" class="filter-button-close-icon">-->
-<!--          </button>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </div>-->
+    <!--    <div class="filter-block-applied">-->
+    <!--      <h3 class="filter-block-applied-title">Примененные фильтры</h3>-->
+    <!--      <div class="filter-block-applied-wrapper">-->
+    <!--        <div class="filter-block-applied-wrapper-el">-->
+    <!--          <div class="filter-block-applied-wrapper-el-text">-->
+    <!--            от 8 444 800  ₽  до 23 803 650  ₽-->
+    <!--          </div>-->
+    <!--          <button class="filter-block-applied-wrapper-el-button-close">-->
+    <!--            <images src="images/button-close.svg" alt="Кнопка закрытия" class="filter-button-close-icon">-->
+    <!--          </button>-->
+    <!--        </div>-->
+    <!--        <div class="filter-block-applied-wrapper-el">-->
+    <!--          <div class="filter-block-applied-wrapper-el-text">-->
+    <!--            от 8 444 800  ₽  до 23 803 650  ₽-->
+    <!--          </div>-->
+    <!--          <button class="filter-block-applied-wrapper-el-button-close">-->
+    <!--            <images src="images/button-close.svg" alt="Кнопка закрытия" class="filter-button-close-icon">-->
+    <!--          </button>-->
+    <!--        </div>-->
+    <!--        <div class="filter-block-applied-wrapper-el">-->
+    <!--          <div class="filter-block-applied-wrapper-el-text">-->
+    <!--            от 8 444 800  ₽  до 23 803 650  ₽-->
+    <!--          </div>-->
+    <!--          <button class="filter-block-applied-wrapper-el-button-close">-->
+    <!--            <images src="images/button-close.svg" alt="Кнопка закрытия" class="filter-button-close-icon">-->
+    <!--          </button>-->
+    <!--        </div>-->
+    <!--        <div class="filter-block-applied-wrapper-el">-->
+    <!--          <div class="filter-block-applied-wrapper-el-text">-->
+    <!--            от 8 444 800  ₽  до 23 803 650  ₽-->
+    <!--          </div>-->
+    <!--          <button class="filter-block-applied-wrapper-el-button-close">-->
+    <!--            <images src="images/button-close.svg" alt="Кнопка закрытия" class="filter-button-close-icon">-->
+    <!--          </button>-->
+    <!--        </div>-->
+    <!--        <div class="filter-block-applied-wrapper-el">-->
+    <!--          <div class="filter-block-applied-wrapper-el-text">-->
+    <!--            от 8 444 800  ₽  до 23 803 650  ₽-->
+    <!--          </div>-->
+    <!--          <button class="filter-block-applied-wrapper-el-button-close">-->
+    <!--            <images src="images/button-close.svg" alt="Кнопка закрытия" class="filter-button-close-icon">-->
+    <!--          </button>-->
+    <!--        </div>-->
+    <!--      </div>-->
+    <!--    </div>-->
     <div class="filter-block-common">
       <div class="filter-button-group">
         <button class="filter-button filter-button-big-filter" name="type" data-value="house">Квартира</button>
@@ -560,34 +683,34 @@
       <div class="filter-block-details-wrapper">
         <h2 class="filter-block-details-wrapper-title">Регион</h2>
         <div class="select big-filter-select" name="big_filter_select">
-            <div class="select__header select__multiply">
-              <span class="select__current">Апартаменты</span>
-              <div class="select__icon">
-                <svg viewBox="0 0 16 16" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M2.13003 5.16367C2.31578 4.95934 2.63201 4.94428 2.83633 5.13003L8
+          <div class="select__header select__multiply">
+            <span class="select__current">Апартаменты</span>
+            <div class="select__icon">
+              <svg viewBox="0 0 16 16" fill="none"><path fill-rule="evenodd" clip-rule="evenodd" d="M2.13003 5.16367C2.31578 4.95934 2.63201 4.94428 2.83633 5.13003L8
                9.99997L13.1637 5.13003C13.368 4.94428 13.6842 4.95934 13.87 5.16367C14.0557 5.368 14.0407 5.68422 13.8363 5.86997L8.67267
                10.7399C8.29125 11.0867 7.70875 11.0867 7.32733 10.7399L2.16366 5.86997C1.95933 5.68422 1.94427 5.368 2.13003 5.16367Z"
-                                                           fill="#141414"></path></svg>
-              </div>
-            </div>
-            <div class="select__body">
-              <div class="select__item-list">
-                <div class="select__item">Сразу</div>
-                <div class="select__item">1 квартал</div>
-                <div class="select__item">12 квартал</div>
-                <div class="select__item">13 квартал</div>
-                <div class="select__item">14 квартал</div>
-                <div class="select__item">15 квартал</div>
-                <div class="select__item">61 квартал</div>
-                <div class="select__item">16 квартал</div>
-                <div class="select__item">17 квартал</div>
-                <div class="select__item">18 квартал</div>
-                <div class="select__item">19 квартал</div>
-                <div class="select__item">11 квартал</div>
-                <div class="select__item">21 квартал</div>
-              </div>
-
+                                                         fill="#141414"></path></svg>
             </div>
           </div>
+          <div class="select__body">
+            <div class="select__item-list">
+              <div class="select__item">Сразу</div>
+              <div class="select__item">1 квартал</div>
+              <div class="select__item">12 квартал</div>
+              <div class="select__item">13 квартал</div>
+              <div class="select__item">14 квартал</div>
+              <div class="select__item">15 квартал</div>
+              <div class="select__item">61 квартал</div>
+              <div class="select__item">16 квартал</div>
+              <div class="select__item">17 квартал</div>
+              <div class="select__item">18 квартал</div>
+              <div class="select__item">19 квартал</div>
+              <div class="select__item">11 квартал</div>
+              <div class="select__item">21 квартал</div>
+            </div>
+
+          </div>
+        </div>
         <div class="filter-block-details-wrapper-range">
           <h3 class="filter-block-details-wrapper-range-title">Площадь</h3>
           <div id="rangeSlider1" class="range-slider">
@@ -675,10 +798,9 @@
         <button class="filter-block-controls-button-clear" name="clear">Очистить</button>
       </div>
     </div>
-    <br><br><br><br><br><br><br><br>
+
   </div>
 </div>
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 <footer class="footer">
   <div class="container">
     <div class="footer_container">
@@ -793,23 +915,10 @@
     </div>
   </div>
 </footer>
-<template id="applied-filter-template">
-  <div class="filter-block-applied">
-    <h3 class="filter-block-applied-title">Применённые фильтры</h3>
-    <div class="filter-block-applied-wrapper"></div>
-  </div>
-</template>
-<template id="applied-filter-item-template">
-  <div class="filter-block-applied-wrapper-el">
-    <span class="filter-block-applied-wrapper-el-text"></span>
-    <button class="filter-block-applied-wrapper-el-button-close">
-      <img src="../img/button-close.svg" alt="Закрыть" class="filter-button-close-icon">
-    </button>
-  </div>
-</template>
-<script src="../js/app.js"></script>
+<script src="../js/swiper-bundle.min.js"></script>
+<script src="../filter/js/filter_class.js"></script>
 <script src="../form/js/form_modal.js" ></script>
-<script src="js/filter_class.js"></script>
-
+<script src="js/app.js"></script>
 </body>
+
 </html>
