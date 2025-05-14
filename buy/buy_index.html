@@ -561,74 +561,39 @@
     <h2 class="real-estate-search-title real-estate-search-link" data-id="0">Купить недвижимость в регионе <span
       class="real-estate-buy-title-dynamic"></span></h2>
     <ul class="real-estate-buy-list">
-      <?
-      foreach ($zhks as $zhk){?>
       <li class="real-estate-buy-item" data-code="<?=$zhk->code?>">
-        <img src="<?=$zhk->photo_link?>" alt="Изображение недвижимости" class="real-estate-buy-item-image"
+        <img src="../img/zhk-image.webp" alt="Изображение недвижимости" class="real-estate-buy-item-image"
              loading="lazy">
-        <h3 class="real-estate-buy-item-title"><?=$zhk->name?></h3>
+        <h3 class="real-estate-buy-item-title">Орехово</h3>
         <p class="real-estate-buy-item-description">
-          <span class="real-estate-buy-item-description-address-text"><?=$zhk->description?></span>
+          <span class="real-estate-buy-item-description-address-text">Московская область, Одинцовский городской округ, с. Лайково, микрорайон Город-событие</span>
           <!-- <span class="real-estate-buy-item-description-price-text">От <?=$zhk->price_from?> млн</span>   -->
         </p>
         <div class="real-estate-buy-item-description-hidden">
-          <?if ($zhk->kv_count && ($zhk->min_price_flat || $zhk->min_square_flat)){?>
           <div class="real-estate-buy-item-description-hidden-row">
             <span class="real-estate-buy-item-description-hidden-row-text-bald">Квартиры:</span>
-
-            <?if ($zhk->min_square_flat){?>
-            <p>от <?=$zhk->min_square_flat?> м2</p>
-            <?}?>
-
-            <?if ($zhk->min_price_flat){?>
-            <p>от <?=round($zhk->min_price_flat / 1000000, 1)?> млн руб</p>
-            <?}?>
+            <p>от 1 м2</p>
+            <p>от 1 млн руб</p>
           </div>
-          <?}?>
-          <?if ($zhk->comm_count && ($zhk->min_price_commerce || $zhk->min_square_commerce)){?>
+
+
           <div class="real-estate-buy-item-description-hidden-row">
             <span class="real-estate-buy-item-description-hidden-row-text-bald">Коммерческие:</span>
-
-            <?if ($zhk->min_square_commerce){?>
-            <p>от <?=$zhk->min_square_commerce?> м2</p>
-            <?}?>
-
-            <?if ($zhk->min_price_commerce){?>
-            <p>от <?=round($zhk->min_price_commerce / 1000000, 1)?> млн руб</p>
-            <?}?>
+            <p>от 1 м2</p>
+            <p>от 1 млн руб</p>
           </div>
-          <?}?>
-          <?if ($zhk->parking_count && ($zhk->min_price_parking || $zhk->min_square_parking)){?>
           <div class="real-estate-buy-item-description-hidden-row">
             <span class="real-estate-buy-item-description-hidden-row-text-bald">Паркинг:</span>
-
-            <?if ($zhk->min_square_parking){?>
-            <p>от <?=$zhk->min_square_parking?> м2</p>
-            <?}?>
-
-            <?if ($zhk->min_price_parking){?>
-            <p>от <?=round($zhk->min_price_parking / 1000000, 1)?> млн руб</p>
-            <?}?>
+            <p>от 1 м2</p>
+            <p>от 1 млн руб</p>
           </div>
-          <?}?>
-          <?if ($zhk->klad_count && ($zhk->min_price_klad || $zhk->min_square_klad)){?>
           <div class="real-estate-buy-item-description-hidden-row">
             <span class="real-estate-buy-item-description-hidden-row-text-bald">Кладовые:</span>
-
-            <?if ($zhk->min_square_klad){?>
-            <p>от <?=$zhk->min_square_klad?> м2</p>
-            <?}?>
-
-            <?if ($zhk->min_price_klad){?>
-            <p>от <?=round($zhk->min_price_klad / 1000000, 1)?> млн руб</p>
-            <?}?>
+            <p>от 1 м2</p>
+            <p>от 1 млн руб</p>
           </div>
-          <?}?>
         </div>
       </li>
-      <?}?>
-
-
     </ul>
     <button class="real-estate-buy-show-all-button">посмотреть все ЖК региона (<span
       class="real-estate-buy-count">28</span>)
