@@ -572,7 +572,7 @@ class BigFilter extends BaseFilter {
   }
 
   async applyFilters() {
-    const url = this.ServerDependancies.getUrl('filters');
+    const url = this.ServerDependancies.this.getUrl('filters');
     const filterData = this.getFilterData();
     try {
       const htmlResponse = await this.sendRequest(url, filterData);
