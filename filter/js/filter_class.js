@@ -1,7 +1,30 @@
 // Общий класс для фильтра
 class BaseFilter {
-  sendRequest(url, data) {
-    // return html
+  async sendRequest(url, data, method = 'POST') {
+    try {
+      const response = await fetch(url, {
+        method,
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      });
+
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+
+      // Проверяем тип контента ответа
+      const contentType = response.headers.get('content-type');
+      if (contentType && contentType.includes('text/html')) {
+        return await response.text(); // Возвращаем HTML как строку
+      } else {
+        throw new Error('Сервер вернул неожиданный тип контента. Ожидается text/html.');
+      }
+    } catch (error) {
+      console.error('Ошибка при отправке запроса:', error);
+      throw error;
+    }
   }
 }
 
@@ -507,6 +530,9 @@ class ButtonAppliedClear extends BaseInput {
     if (appliedBlock) {
       appliedBlock.remove();
     }
+
+    // Обновляем интерфейс
+    this.bigFilter.this.applyFilters();
   }
 
   initListener() {
@@ -534,25 +560,62 @@ class BigFilter extends BaseFilter {
     this.type_select = new SelectDropdown("big-filter-select", "big_filter_select");
     this.type_button_clear = new ButtonAppliedClear("filter-block-controls-button-clear", "clear", this);
   }
+
+  getFilterData() {
+    return {
+      type: this.type_buttons.value,
+      type_room: this.type_buttons_room_count.value,
+      price_range: this.type_ranges_price.value,
+      square_range: this.type_ranges_square.value,
+      select: this.type_select.value,
+    };
+  }
+
+  async applyFilters() {
+    const url = this.ServerDependancies.getUrl('filters');
+    const filterData = this.getFilterData();
+    try {
+      const htmlResponse = await this.sendRequest(url, filterData);
+      this.updateUI(htmlResponse);
+    } catch (error) {
+      console.error('Ошибка при применении фильтров:', error);
+    }
+  }
+
+  updateUI(html) {
+    const resultsContainer = document.querySelector(this.HtmlClassesDependancies.this.resultsContainerSelector);
+    if (resultsContainer) {
+      resultsContainer.innerHTML = html; // Вставляем HTML в контейнер
+    }
+  }
 }
 
 // DI данные для запросов
 class ServerDependancies {
-  constructor() {
+  constructor(baseUrl, authToken = null) {
+    this.baseUrl = baseUrl;
+    this.authToken = authToken;
+  }
 
+  getUrl(endpoint) {
+    return `${this.baseUrl}/${endpoint}`;
   }
 }
 
 // DI данные для запросов
 class HtmlClassesDependancies {
   constructor() {
-
+    this.filterContainerSelector = '.filter-container';
+    this.appliedBlockSelector = '.filter-block-applied';
+    this.resultsContainerSelector = '.real-estate-cards-list';
   }
 }
 
 // Класс для общей инициализаии при рендере
 class Filter {
   constructor() {
+    const ServerDependancies = new ServerDependancies('link', 'token');
+    const HtmlClassesDependancies = new HtmlClassesDependancies();
     const small_filter = new SmallFilter();
     const big_filter = new BigFilter();
     // Инициализация маленького фильтра
